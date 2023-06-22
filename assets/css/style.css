@@ -7,9 +7,20 @@ body {
 }
 
 .project {
-  padding: 40px 10px;
+    padding: 10px 10px;
   border: 2px solid #4a4a4a;
   background-color: rgb(193, 193, 193);
+  margin-top: 40px;
   margin-bottom: 40px;
-  
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 35px;
 }
+
+.project header {
+    text-align: center;
+    background: #490000;
+    color: #fff;
+    padding: 15px;
+    border-radius: 35px 35px 0px 0px;
+  }
