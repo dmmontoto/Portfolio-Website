@@ -24,3 +24,8 @@ body {
     padding: 15px;
     border-radius: 35px 35px 0px 0px;
   }
+
+.project p {
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
