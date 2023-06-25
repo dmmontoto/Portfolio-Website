@@ -35,6 +35,7 @@ nav ul {
     align-items: flex-start;    
     background-color: black;
     padding: 25px;
+    margin-bottom: 100px;
 }
 
 #about img {
@@ -75,6 +76,7 @@ nav ul {
     color: #fff;
     padding: 15px;
     border-radius: 35px 35px 0px 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
 .project-section p {
@@ -90,4 +92,27 @@ nav ul {
     justify-content: center; 
     align-items: center; 
     height: 100vh;
+}
+
+#resume {
+  color: #fff;
+  margin-top: 300px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#resume header {
+  font-size: 20px;
+  margin-bottom: 20px;
+  background: #490000;
+  color: #fff;
+  padding: 15px;
+  border-radius: 35px 35px 0px 0px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 52%;
+  box-sizing: border-box; /* Include padding within the width */
+  text-align: center;
 }
