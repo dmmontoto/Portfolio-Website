@@ -5,28 +5,39 @@ body {
     background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
 }
 
-nav {
-    background-color: #490000;
-    padding-top: 50px;
-    padding-bottom: 25px;
-}
-
-nav a {
-    font-size: 50px;
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    flex: 1;
+  }
+  
+  nav ul li a {
+    display: block;
+    text-align: center;
+    font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
-    position: relative;
-    margin-left: 104px;
     color: white;
-}
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    background-color: #490000;
+  }
 
-.about {
+#about {
     display: flex;
     align-items: flex-start;    
     background-color: black;
     padding: 25px;
 }
 
-.about img {
+#about img {
     width: 500px;
     height: auto;
     margin-right: 20px;
@@ -37,13 +48,14 @@ nav a {
     padding: 5px;
 }
 
-.about p {
+#about p {
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 40px;
-    font-size: 20px;
+    margin-top: 30px;
+    font-size: 18px;
     color: white;
     line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .project-section {
@@ -70,7 +82,7 @@ nav a {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.Resume {
+#resume {
     color: #fff;
     margin-top: 300px;
     margin-bottom: 50px;
