@@ -15,6 +15,15 @@ body {
     background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
 }
 
+nav {
+    position: fixed;
+    background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+    background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+    background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+    width: 100%;
+}
+
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -45,6 +54,7 @@ nav ul li a:hover {
     align-items: flex-start;    
     background-color: black;
     padding: 25px;
+    margin-top: 60px;
     margin-bottom: 50px;
 }
 
@@ -89,9 +99,12 @@ nav ul li a:hover {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-.project-section p {
+.project-section p,
+.project-section ul li a {
     padding: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    size: 20px;
 }
 
 #resume {
