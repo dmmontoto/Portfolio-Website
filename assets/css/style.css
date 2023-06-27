@@ -99,12 +99,17 @@ nav ul li a:hover {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-.project-section p,
-.project-section ul li a {
+.project-section p {
     padding: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.5;
-    size: 20px;
+    font-size: 15px;
+}
+
+.project-section ul li a {
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 2.0;
 }
 
 #resume {
