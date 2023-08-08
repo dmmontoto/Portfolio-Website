@@ -1,3 +1,10 @@
+:root {
+    --main-red: #490000;
+    --main-grey: rgb(72, 72, 72);
+    --main-blue: rgb(23, 91, 147);
+    --secondary-grey: rgb(197, 197, 197);
+}
+
 main {
     flex: 1; 
     display: flex;
@@ -22,6 +29,7 @@ nav {
     background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
     background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 nav ul {
@@ -38,27 +46,27 @@ nav ul li {
 nav ul li a {
     display: block;
     text-align: center;
-    font-size: 24px;
+    font-size: 29px;
     font-family: 'Courier New', Courier, monospace;
-    color: white;
+    color:var(--secondary-grey);
     padding: 20px;
     text-decoration: none;
 }
   
 nav ul li a:hover {
-    background-color: #490000;
+    background-color: var(--main-blue);
 }
 
-#about {
-    display: flex;
+/* Main */
+#home {
+    display:inline;
     align-items: flex-start;    
     background-color: black;
-    padding: 25px;
-    margin-top: 60px;
+    margin-top: 80px;
     margin-bottom: 50px;
 }
 
-#about img {
+/* #home img {
     width: 500px;
     height: auto;
     margin-right: 20px;
@@ -67,26 +75,103 @@ nav ul li a:hover {
     margin-bottom: 25px;
     border: 5px solid #490000;
     padding: 5px;
-}
+} */
 
-#about p {
+#home p {
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 30px;
-    font-size: 18px;
-    color: white;
+    font-size: 20px;
+    color: var(--secondary-grey);
     line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
+    padding-left: 150px;
+    padding-right: 500px;
+}
+
+#home h1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    padding-left: 150px;
+    padding-right: 500px;
+}
+
+#home h2 {
+    color: var(--secondary-grey);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    padding-left: 150px;
+    padding-right: 500px;
+}
+
+#home h6 {
+    margin-top: 200px;
+    margin-left: 50px;
+    font-size: 25px;
+    color: var(--main-blue);
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 150px;
+    padding-right: 500px;
+}
+
+.contact-section {
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.contact-section img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    transition: filter 0.3s ease; /* Add a smooth transition effect */
+    color: var(--main-blue);
+
+    transition: transform 0.3s ease-in-out 0s;
+}
+
+.contact-section img:hover {
+    filter: brightness(1.5); /* Adjust the value to make the icon brighter on hover */
+    transform: translateY(-10px);
+}
+  
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.about-me-header1 {
+    animation-name: slideInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+    color: #fff;
 }
 
 .project-section {
     padding: 10px 10px;
     border: 2px solid #4a4a4a;
     background-color: rgb(193, 193, 193);
-    margin-top: 60px;
-    margin-bottom: 60px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-left: 120px;
+    margin-right: 120px;
     border-radius: 35px;
 }
 
@@ -112,6 +197,18 @@ nav ul li a:hover {
     line-height: 2.0;
 }
 
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Resume */
+
 #resume {
     color: #fff;
     margin-top: 75px;
@@ -123,31 +220,83 @@ nav ul li a:hover {
 }
 
 #resume header {
-    font-size: 20px;
-    margin-bottom: 20px;
-    background: #490000;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    background:var(--main-blue);
     color: #fff;
     padding: 15px;
     border-radius: 35px 35px 0px 0px;
     font-family: 'Courier New', Courier, monospace;
-    width: 52%;
+    width: 40%;
     box-sizing: border-box; 
     text-align: center;
+}
+
+#featurePageNav {
+    position: fixed;
+    top: 0; 
+    left: 0;
 }
 
 .iframe-container {
     width: 55%;
     height: auto; 
-    margin-bottom: 50px; 
+    margin-bottom: 20px; 
 }
 
-#footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
+/* Project */
+#aboutProjects {
+    text-align: center;
+    align-items: flex-start;    
     background-color: black;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+    padding: 25px;
 }
+
+#aboutProjects p {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+
+#goToIndexBtn:hover {
+    background-color: var(--main-grey)
+}
+
+/* Style for the button container */
+#goToIndexBtn {
+    position: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    background-color: var(--main-blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+
+  /* Optional: Adjust the size and position of the button if needed */
+  /* For example, to align the button to the left */
+  #goToIndexBtn {
+    float: left;
+  }
+  
+  /* Optional: Add some spacing around the button if needed */
+  /* For example, to add some space to the right of the button */
+  #goToIndexBtn {
+    margin-right: 10px;
+  }
+
+
+  
 

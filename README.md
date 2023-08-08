@@ -13,3 +13,5 @@ The inspiration behind the page's design is a combination of modern and automoti
 
 My software-enginnering journey has only begun; moreover, this website will be improved, tweaked, and reorganized as more projects are developed and created. As an incoming junior at The University of California, San Diego, I expect to diversify my projects with time.
 
+HTML and CSS Project Tutorial: Pure CSS Image Slider
+youtube.com/watch?v=McPdzhLRzCg

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Portfolio Website</title>
+  <title>Portfolio Homepage</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
@@ -16,10 +16,10 @@
   <!-- Navbar -->
   <nav>
     <ul class = "navList">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="https://www.linkedin.com/in/david-montoto">LinkedIn</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/david-montoto">Work History</a></li>
+        <li><a href="index.html">Contact</a></li>
       </ul>
   </nav>
 
@@ -27,64 +27,38 @@
   <main>
     <!-- About me Section -->
     <div>
-        <section id ="about">
-            <img src="./assets/images/profilePic.png"/>
-            <p>Where passion meets expertise and innovation intertwines with determination. 
-                As a sophomore at UCSD, specializing in Computer Science and Mathematics with a minor in Finance, I am a relentless force driven by the pursuit of excellence. 
-                With a diverse skill set encompassing Java, JavaScript, C++, C, Python, R, MATLAB, HTML, CSS, and Node.js, 
-                I have embarked on an extraordinary journey in software and web development, leaving a lasting impact. Over the past year, as a software engineer at Beverly Hills Aerials, 
-                I have proven my dedication, collaborating with like-minded individuals to create groundbreaking solutions. 
-                I embody the qualities of a hardworking individual who thrives on collaboration and is always seeking new and exciting projects. 
-                Join me on this exhilarating adventure where innovation knows no bounds.</p>
+        <section id ="home">
+          <h6>Hi, my name is</h6>
+          <h1>David Montoto.</h1>
+          <h2>I build things for the web.</h2>
+          <p>I'm a software engineer hailing from sunny Southern California and proudly studying at the University of California,
+            San Diego. With a strong foundation in web projects,
+            I bring expertise in advanced data structures and backend development to create impactful solutions.</p>
+          <div class="contact-section">
+            <a href="https://www.linkedin.com/in/david-montoto" target="_blank">
+              <img src="assets/images/LinkedIn.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.github.com/dmmontoto" target="_blank">
+              <img src="assets/images/GitLogo.png" alt="GitHub">
+            </a>
+            <a href="https://www.instagram.com/david_montoto/" target="_blank">
+              <img src="assets/images/Instagram.png" alt="Instagram">
+            </a>
+          </div>
         </section>
     </div>
-    <!-- Project Cards -->
-    <div id = "projects">
-      <section id = "project1" class = "project-section">
-        <header>5g Raspberry Pi Live Video</header>
-        <p>&#x2022; Programmed a Raspberry Pi 3 Model B+ with camera for live-streaming sporting events</p>
-        <p>&#x2022; Utilized libcamera to meet contractor's specifications</p>
-        <p>&#x2022; Configured GStreamer and remote access to allow live-streaming capabilities while raspberry pi is on custom build drone </p>
-        <p>&#x2022; Integrated 5g Quanta Chip for long range live streaming</p>
-      </section>
-      <section id = "project2" class = "project-section">
-        <header>C and Assembly Projects</header>
-        <p>&#x2022; Developed an encrypter program and implemented the Collatz conjecture in C</p>
-        <p>&#x2022; Implemented a scalable and efficient data processing system, reducing processing time by 50% and improving overall project productivity</p>
-        <p>&#x2022; Implemented the Game of Life into C code to prioritize memory efficieny and  speed</p>
-        <p>&#x2022; Implement a hash table-based in-memory database using single linked chains for collision resolution, capable of storing tree data from Yosemite and Sequoia National parks and querying it by the tree's identifier in near constant time.</p>
-        <p>&#x2022; Implemented ARM assembly code to convert 12-bit floating-point numbers to IEEE 754 single precision format and handle ±infinity cases.</p>
-        <p>&#x2022; Implemented the doRow function in ARM assembly language to process one row of a board in the Game of Life simulation</p>
-      </section>
-      <section id = "project3" class = "project-section">
-        <header>Java Data Structures and Algorithms</header>
-        <p>&#x2022; Rock-Paper-Scissors-Variation Game with Inheritence</p>
-        <p>&#x2022; Implementation of Created ArrayList with Unit Testing</p>
-        <p>&#x2022; Testing and Implementation of Created Doubly Linked List</p>
-        <p>&#x2022; Testing and Implementation of Created ListIterator</p>
-        <p>&#x2022; Testing and Implementation of Craeted HashMap and HashSet Application</p>
-        <p>&#x2022; Testing and Implementation of Created Deque, Stack, and Queue</p>
-        <p>&#x2022; Testing and Implementation of Created MinHeap and MyPriorityQueue</p>
-        <p>&#x2022; Implemented and Tested an N-Ary tree using BFS through an Array</p>
-      </section>
-      <section id = "project4" class = "project-section">
-        <header>HTML Semantics</header>
-        <ul>
-          <li>&#x2022;<a href = "https://dmmontoto.github.io/Horiseon-Website/">Created Service Website for Horiseon with proper HTML Semantics</a></li>
-          <li>&#x2022;<a href = "https://github.com/dmmontoto/Horiseon-Website">Link to GitHub Repo</a></li>
-        </ul>
-      </section>
-    </div>
-
-    <div id="resume">
-        <header>Resume</header>
-        <div class="iframe">
-          <iframe width="750" height="1100" src="https://docs.google.com/document/d/e/2PACX-1vRkAaegOTkbgRZ9_24Zzz1FOdadDYLSoj1SXQiloJc53uhOrdfkTB_yl-l1ZuzWgtN2W2jWLHY10uNx/pub?embedded=true"></iframe>
-        </div>
+    
+    <div class="about-me">
+      <h2 class="about-me-header1">I build things for the web.</h2>
+      <p>I'm a software engineer hailing from sunny Southern California and proudly studying at the University of California,
+        San Diego. With a strong foundation in web projects,
+        I bring expertise in advanced data structures and backend development to create impactful solutions.</p>
     </div>
   </main>
-  <footer id = "footer">
-  </footer>
+  <!-- <footer id = "footer">
+  </footer> -->
 </body>
-
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./assets/js/script.js"></script>
 </html>
