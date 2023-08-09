@@ -55,6 +55,7 @@ nav ul li a {
   
 nav ul li a:hover {
     background-color: var(--main-blue);
+    color: var(--secondary-grey);
 }
 
 /* Main */
@@ -191,6 +192,102 @@ nav ul li a:hover {
 }
 
 
+.rocket-scene {
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    /* background: black; */
+}
+
+.rocket-scene i {
+    position: absolute;
+    top: -250px;
+    background: var(--secondary-grey);
+    animation: animateStars linear infinite;
+}
+@keyframes animateStars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(90vh);
+    }
+}
+
+.rocket-scene .rocket {
+    position: relative;
+    animation: animateRocket 0.2s ease infinite;;
+}
+@keyframes animateRocket {
+    0%, 100% {
+        transform: translateY(-2px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+}
+
+.rocket-scene .rocket::before {
+    content: '';
+    position: absolute;
+    bottom: -188px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 200px;
+    background: linear-gradient(var(--main-blue), transparent);
+}
+
+.rocket-scene .rocket::after {
+    content: '';
+    position: absolute;
+    bottom: -188px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 200px;
+    background: linear-gradient(var(--main-blue), transparent);
+    filter: blur(20px);
+}
+
+.rocket-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: 150px; /* Adjust this value to control the height */
+}
+
+#tab {
+    border-color: #490000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    align-items: center;
+}
+
+#tab h2 {
+    color: var(--main-blue);
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Nanum Myeongjo', serif;
+    margin-top: 100px;
+}
+
+#tab p {
+    text-align: center;
+    font-size: 20px;
+    color: var(--secondary-grey);
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
+}
+
 #tab1 {
     display: flex;
     flex-direction: column; /* Stack items vertically */
@@ -242,7 +339,85 @@ nav ul li a:hover {
     line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
 }
+
+#tab3 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-end; /* Align items to the right side */
+}
+
+#tab3 h2 {
+    color: var(--main-blue);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    font-family: 'Nanum Myeongjo', serif;
+    margin-right:275px;
+}
+
+#tab3 p {
+    width: 45%;
+    text-align: center;
+    margin-right: 100px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: var(--secondary-grey);
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#tab4 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the right side */
+}
+
+#tab4 h2 {
+    color: var(--main-blue);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    font-family: 'Nanum Myeongjo', serif;
+    margin-left: 250px;
+}
+
+#tab4 p {
+    width: 45%;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: var(--secondary-grey);
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
   
+#tab5 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-end; /* Align items to the right side */
+}
+
+#tab5 h2 {
+    color: var(--main-blue);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    font-family: 'Nanum Myeongjo', serif;
+    margin-right: 300px;
+}
+
+#tab5 p {
+    width: 45%;
+    text-align: center;
+    margin-right: 100px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: var(--secondary-grey);
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 @keyframes slideInLeft {
     from {
         transform: translateX(-850px);
