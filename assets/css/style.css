@@ -30,6 +30,7 @@ nav {
     background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
     width: 100%;
     margin-bottom: 50px;
+    z-index: 1000;
 }
 
 nav ul {
@@ -185,11 +186,37 @@ nav ul li a:hover {
 
 .about-me h1 {
     color: var(--main-blue);
+    position: relative;
     text-align: center;
     font-size: 40px;
     margin-top: 70px;
     font-family: 'Nanum Myeongjo', serif;
 }
+/* 
+.about-me h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 43%;
+    height: 100%;
+    color: var(--main-blue);
+    -webkit-text-stroke: 0vw black;
+    border-right: 2px solid var(--main-blue);
+    overflow: hidden;
+    animation: about-me-animate 3s linear;
+}
+.about-me h1::after {
+    color: var(--main-blue);
+}
+@keyframes about-me-animate {
+    0% {
+        width: 43%;
+    }
+    100%{
+        width: 100%;
+    }
+} */
 
 
 .rocket-scene {
@@ -263,50 +290,65 @@ nav ul li a:hover {
     max-height: 150px; /* Adjust this value to control the height */
 }
 
-#tab {
-    border-color: #490000;
+#tab1 {
     display: flex;
     flex-direction: column;
     align-items: flex-end; 
     align-items: center;
 }
 
-#tab h2 {
+#tab1 h2 {
     color: var(--main-blue);
     text-align: center;
     font-size: 40px;
     font-family: 'Nanum Myeongjo', serif;
     margin-top: 100px;
+
+    animation-name: slideInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
 }
 
-#tab p {
+#tab1 p {
     text-align: center;
     font-size: 20px;
     color: var(--secondary-grey);
     line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 30px;
+
+    animation-name: slideInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 1.8s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
 }
 
-#tab1 {
+#tab11 {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: flex-end; /* Align items to the right side */
 }
 
-#tab1 h2 {
+#tab11 h2 {
     color: var(--main-blue);
     text-align: center;
     font-size: 40px;
     margin-top: 100px;
     font-family: 'Nanum Myeongjo', serif;
-    margin-right: 300px;
+    /* margin-right: 300px; */
 }
 
-#tab1 p {
+#tab11 p {
     width: 45%;
     text-align: center;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     margin-top: 30px;
     font-size: 20px;
     color: var(--secondary-grey);
@@ -318,6 +360,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to the right side */
+    align-items: center;
 }
 
 #tab2 h2 {
@@ -326,13 +369,12 @@ nav ul li a:hover {
     font-size: 40px;
     margin-top: 100px;
     font-family: 'Nanum Myeongjo', serif;
-    margin-left: 150px;
+    /* margin-left: 150px; */
 }
 
 #tab2 p {
-    width: 45%;
     text-align: center;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     margin-top: 30px;
     font-size: 20px;
     color: var(--secondary-grey);
@@ -344,6 +386,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: flex-end; /* Align items to the right side */
+    align-items: center;
 }
 
 #tab3 h2 {
@@ -352,13 +395,10 @@ nav ul li a:hover {
     font-size: 40px;
     margin-top: 100px;
     font-family: 'Nanum Myeongjo', serif;
-    margin-right:275px;
 }
 
 #tab3 p {
-    width: 45%;
     text-align: center;
-    margin-right: 100px;
     margin-top: 30px;
     font-size: 20px;
     color: var(--secondary-grey);
@@ -370,6 +410,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to the right side */
+    align-items: center;
 }
 
 #tab4 h2 {
@@ -378,13 +419,10 @@ nav ul li a:hover {
     font-size: 40px;
     margin-top: 100px;
     font-family: 'Nanum Myeongjo', serif;
-    margin-left: 250px;
 }
 
 #tab4 p {
-    width: 45%;
     text-align: center;
-    margin-left: 100px;
     margin-top: 30px;
     font-size: 20px;
     color: var(--secondary-grey);
@@ -396,6 +434,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: flex-end; /* Align items to the right side */
+    align-items: center;
 }
 
 #tab5 h2 {
@@ -404,13 +443,10 @@ nav ul li a:hover {
     font-size: 40px;
     margin-top: 100px;
     font-family: 'Nanum Myeongjo', serif;
-    margin-right: 300px;
 }
 
 #tab5 p {
-    width: 45%;
     text-align: center;
-    margin-right: 100px;
     margin-top: 30px;
     font-size: 20px;
     color: var(--secondary-grey);
@@ -421,6 +457,16 @@ nav ul li a:hover {
 @keyframes slideInLeft {
     from {
         transform: translateX(-850px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(850px);
     }
 
     to {
