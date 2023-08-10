@@ -356,6 +356,39 @@ nav ul li a:hover {
     font-family: 'Courier New', Courier, monospace;
 }
 
+#nasaLogo {
+    display: flex;
+    align-items: center;
+}
+
+#nasa-img {
+    margin-top: 100px;
+    width: 45%;
+    height: auto;
+    position: relative;
+    top: 0; /* Positions the image at the top */
+    left: 0; /* Positions the image at the left */
+    filter: brightness(80%);
+    margin-right: 20px;
+}
+
+#nasa-title {
+    font-size: 36px;
+    margin-top: 100px;
+    color: rgb(193, 21, 21);
+    font-family: 'Abril Fatface', cursive;
+    text-transform: capitalize;
+}
+
+#nasa-display {
+    display: flex;
+    align-items: center;
+}
+
+#img-display {
+    width: 100%;
+}
+
 #tab3 {
     display: flex;
     flex-direction: column; /* Stack items vertically */
