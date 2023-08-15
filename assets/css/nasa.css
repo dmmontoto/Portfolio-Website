@@ -1,0 +1,45 @@
+:root {
+    --main-red: rgb(193, 21, 21);
+    --main-grey: rgb(72, 72, 72);
+    --main-blue: rgb(23, 91, 147);
+    --secondary-grey: rgb(197, 197, 197);
+}
+
+body {
+    background-color: black;
+}
+
+body {
+    background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+    background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+    background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* .nav-link {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    color: var(--secondary-grey);
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: var(--main-blue);
+    text-decoration: underline;
+}
+
+#dropdown-menu li a{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#dropdown-menu li a:hover {
+    background-color: var(--main-blue);
+} */

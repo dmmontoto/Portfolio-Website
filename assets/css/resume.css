@@ -1,0 +1,31 @@
+/* Resume */
+
+#resume {
+    color: #fff;
+    margin-top: 75px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#resume header {
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    background:var(--main-blue);
+    color: #fff;
+    padding: 15px;
+    border-radius: 35px 35px 0px 0px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 40%;
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+.iframe-container {
+    width: 55%;
+    height: auto; 
+    margin-bottom: 20px; 
+}
