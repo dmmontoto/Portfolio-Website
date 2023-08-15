@@ -1,11 +1,3 @@
-$(document).ready(function() {
-    // Attach a click event handler to the button with id "gotoIndexBtn"
-    $("#goToIndexBtn").on("click", function() {
-        // Redirect to "index.html" when the button is clicked
-        window.location.href = "index.html";
-    });
-});
-
 // Rocket
 function stars() {
     let count = 50;
