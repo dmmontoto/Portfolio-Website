@@ -24,7 +24,10 @@ body {
 
 nav {
     font-family: 'Ruwudu', serif;
-    
+}
+
+#offcanvasNavbarLabel {
+    font-size: 30px;
 }
 
 @media (max-width: 991px) {
@@ -165,7 +168,7 @@ nav {
 
 @keyframes slideInDown {
     from {
-        transform: translateY(1000px);
+        transform: translateY(1400px);
     }
 
     to {

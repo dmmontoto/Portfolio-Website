@@ -8,9 +8,9 @@
     margin-bottom: 100px;
 }
 
-.row {
+/* .row {
     display: flex;
-}
+} */
 
 .rocket-scene {
     margin-top: 100px;
@@ -21,6 +21,7 @@
     align-items: center; /*change*/
     width: 100%;
     height: 70vh; /*change here from 50 to 70 LOOKS FINE ON PLANE */
+    max-height: 600px;
     /* background: black; */
 }
 
@@ -150,6 +151,70 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+.clock-background {
+    margin-top: 70px;
+    position: relative;
+    background: var(--secondary-grey);
+    /* min-height: 500px; */
+    max-width: max-content;
+    width: 450px;
+    border-radius: 20px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.75), 
+    10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(0,0,0,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background: var(--secondary-grey);
+    border-radius: 50%;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(0,0,0,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    margin-bottom: 30px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--main-blue);
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.clock span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--main-blue);
+    text-align: center;
+    inset: 20px;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock span b {
+    font-size: 2em;
+    opacity: 0.5;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
 #nasaLogo {
     display: flex;
     align-items: center;
@@ -239,6 +304,7 @@
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/los-angeles-skyline-at-night-ferrantraite.jpg);
     background-position: center;
     background-size: cover;
+    max-height: 600px;
 }
 
 #drone-box {
