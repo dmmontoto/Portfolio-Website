@@ -487,6 +487,65 @@
     margin-bottom: 100px;
 }
 
+.glass-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: max-content; */
+    flex-wrap: wrap;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.glass-card {
+    position: relative;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.glass-content {
+    padding: 20px;
+    color: var(--secondary-grey);
+    text-align: center;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.glass-container .glass-card:hover .glass-content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.glass-content h2 {
+    color: var(--main-blue);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.glass-content p {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    color: var(--secondary-grey);
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
+}
+
 @keyframes slideInDown {
     from {
         transform: translateY(1000px);
