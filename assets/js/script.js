@@ -21,6 +21,29 @@ function stars() {
 }
 stars();
 
+// Clock
+function clock() {
+    let hr = document.querySelector('#hr');
+    let mn = document.querySelector('#mn');
+    let sc = document.querySelector('#sc');
+
+    setInterval(() => {
+        let day = new Date();
+        let hour = day.getHours() * 30;
+        let minute = day.getMinutes() * 6;
+        let second = day.getSeconds() * 6;
+    
+        // hr.style.transform = `rotateZ(190deg)`;
+        // mn.style.transform = `rotateZ(190deg)`;
+        // sc.style.transform = `rotateZ(190deg)`;
+
+        hr.style.transform = `rotateZ(${hour+(minute/12)}deg)`;
+        mn.style.transform = `rotateZ(${minute}deg)`;
+        sc.style.transform = `rotateZ(${second}deg)`;
+    })
+}
+clock();
+
 // Mars Rover
 function roverSearch(date, roverName, camera) {
     const nasaApiKey = '2QbpLQBozt59EwMHuzZseMAHas7Z9Q6X2gVu7UFm';

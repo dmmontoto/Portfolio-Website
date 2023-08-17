@@ -1,3 +1,10 @@
+:root {
+    --main-red: #c11515;
+    --main-grey: #484848;
+    --main-blue: #175b93;
+    --secondary-grey: #c5c5c5;
+}
+
 .about-me h1 {
     color: var(--main-blue);
     position: relative;
@@ -157,7 +164,7 @@
     background: var(--secondary-grey);
     /* min-height: 500px; */
     max-width: max-content;
-    width: 450px;
+    width: auto;
     border-radius: 20px;
     border-top-left-radius: 225px;
     border-top-right-radius: 225px;
@@ -173,8 +180,8 @@
 
 .clock {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     background: var(--secondary-grey);
     border-radius: 50%;
     box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
@@ -187,14 +194,15 @@
 .clock::before {
     content: '';
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--main-blue);
-    border: 3px solid white;
+    border: 2px solid white;
     border-radius: 50%;
+    z-index: 1000;
 }
 
 .clock span {
@@ -213,6 +221,67 @@
     font-weight: 600;
     display: inline-block;
     transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle {
+    position: absolute;
+    width: 266px;
+    height: 266px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    top: 16.7%; 
+    left: 16.7%; 
+    transform: translate(-20%, -20%); 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.circle i {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background-color: var(--clr);
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+
+.circle:nth-child(1) i {
+    width: 3px;
+}
+
+.circle:nth-child(2) i {
+    width: 6px;
+}
+
+.circle2 {
+    width: 213px;
+    height: 213px;
+    z-index: 9;
+    top: 23.4%;
+    left: 23.4%;
+}
+
+.circle3 {
+    width: 160px;
+    height: 160px;
+    z-index: 8;
+    top: 30%;
+    left: 30%;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
 }
 
 #nasaLogo {
