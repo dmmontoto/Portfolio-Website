@@ -80,34 +80,39 @@
 
   <!-- Body -->
   <main>
-    <!-- About me Section -->
-    
-
-        <section class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center fs-1" id ="home">
-          <h6>Hi, my name is</h6>
-          <h1>David Montoto.</h1>
-          <h2>I build things for the web.</h2>
-          <p>I'm a software engineer hailing from sunny Southern California and proudly studying at the University of California,
-            San Diego. With a strong foundation in web projects,
-            I bring expertise in advanced data structures and backend development to create impactful solutions.</p>
-          <div class="contact-section">
-            <a href="https://www.linkedin.com/in/david-montoto" target="_blank">
-              <img src="assets/images/LinkedIn.png" alt="LinkedIn"/>
-            </a>
-            <a href="https://www.github.com/dmmontoto" target="_blank">
-              <img src="assets/images/GitLogo.png" alt="GitHub"/>
-            </a>
-            <a href="https://www.instagram.com/david_montoto/" target="_blank">
-              <img src="assets/images/Instagram.png" alt="Instagram"/>
-            </a>
+    <!-- Landing Page -->
+        <section class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center fs-1" id ="landing">
+          <div id="home">
+            <h6>Hi, my name is</h6>
+            <h1>David Montoto.</h1>
+            <h2>I build things for the web.</h2>
+            <p>I'm a software engineer hailing from sunny Southern California and proudly studying at the University of California,
+              San Diego. With a strong foundation in web projects,
+              I bring expertise in advanced data structures and backend development to create impactful solutions.</p>
+            <div class="contact-section">
+              <a href="https://www.linkedin.com/in/david-montoto" target="_blank">
+                <img src="assets/images/LinkedIn.png" alt="LinkedIn"/>
+              </a>
+              <a href="https://www.github.com/dmmontoto" target="_blank">
+                <img src="assets/images/GitLogo.png" alt="GitHub"/>
+              </a>
+              <a href="https://www.instagram.com/david_montoto/" target="_blank">
+                <img src="assets/images/Instagram.png" alt="Instagram"/>
+              </a>
+            </div>
           </div>
         </section>
 
 
     
   </main>
-  <!-- <footer id = "footer">
-  </footer> -->
+  <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelector("#landing"), {
+    max: 25,
+    speed: 400
+  });
+  </script>
 </body>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
