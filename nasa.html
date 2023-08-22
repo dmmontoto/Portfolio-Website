@@ -39,7 +39,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
               <li class="nav-item mx-2">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item mx-2">
                 <a class="nav-link" aria-current="page" href="aboutme.html">About Me</a>
@@ -85,15 +85,31 @@
       <img id="nasa-img" src="assets/images/NASA.png" />
     </div>
 
-    <section class="container">
+    <section class="container justify-content-center align-items-center">
       <div id="search">
         <div class="buttons">
           <button id="curiosity">Curiosity</button>
-          <button id="spirt">Spirit</button>
+          <button id="spirit">Spirit</button>
           <button id="opportunity">Opportunity</button>
         </div>
-        <h2>Search Images</h2>
+        <h2 id="search-title">Search Images</h2>
         <p id="search-description">Please select a rover</p>
+        <div id="selectors">
+          <input type="date" id="date-pattern">
+          <input id="rover-camera-input" list="cameras" class="input column is-full" type="text" placeholder="Rover Cameras">
+          <datalist id="cameras">
+                <!-- Placeholders to test how it works -->
+                <option value="Front Hazard Avoidance Camera">
+                  <option value="Rear Hazard Avoidance Camera">
+                  <option value="Mast Camera">
+                  <option value="Chemistry and Camera Complex">
+                  <option value="Mars Hand Lens Imager">
+                  <option value="Mars Descent Imager">
+                  <option value="Navigation Camera">
+                  <option value="Panoramic Camera">
+                  <option value="Miniature Thermal Emission Spectrometer (Mini-TES)">
+            </datalist>
+        </div>
       </div>
     </section>
 

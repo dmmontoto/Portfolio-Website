@@ -91,7 +91,7 @@ section {
 
 .container {
     position: absolute;
-    width: 120%;
+    width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -106,11 +106,14 @@ section {
 }
 
 .buttons button {
-    width: 100px;
+    width: 130px;
     background-color: var(--main-blue);
-    height: 30px;
+    height: 50px;
     margin: 20px;
     border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
 }
 
 .buttons button:hover {
@@ -143,6 +146,37 @@ section {
     font-weight: 500;
     color: #fff;
     margin-bottom: 10px;
+}
+
+#search p {
+    color: var(--secondary-grey);
+    font-size: 1em;
+    text-align: center;
+}
+
+#selectors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#selectors input {
+    margin: 20px;
+}
+
+#date-pattern {
+    max-width: 200px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--secondary-grey);
+}
+
+#rover-camera-input {
+    max-width: 200px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--secondary-grey);
+
 }
 
 #curiosity-form {
