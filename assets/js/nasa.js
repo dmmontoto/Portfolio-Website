@@ -20,3 +20,11 @@ function roverSearch(date, roverName, camera) {
         });
 }
 roverSearch('2015-6-3', 'curiosity', 'FHAZ');
+
+//two day turnaround for pics on curiosity
+// curiosity August 6, 2012 
+// live
+// spirit January 5, 2004 
+// The last communication from the Mars Rover Spirit occurred on January 11, 2010
+// January 29, 2004 
+// Opportunity's last communication with Earth was on June 11 2017
