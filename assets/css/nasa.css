@@ -28,11 +28,6 @@ body {
     }
 }
 
-nav {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 .mars-background {
     margin-top: 5px;
     width: 100%;
@@ -90,9 +85,9 @@ section {
 }
 
 .container {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
+    /* position: absolute; */
+    /* width: 100%;
+    height: 100vh; */
     justify-content: center;
     align-items: center;
 
@@ -106,7 +101,6 @@ section {
 }
 
 .buttons button {
-    width: 130px;
     background-color: var(--main-blue);
     height: 50px;
     margin: 20px;
@@ -114,6 +108,7 @@ section {
     padding: 10px;
     text-align: center;
     justify-content: center;
+    min-width: 150px;
 }
 
 .buttons button:hover {
@@ -121,17 +116,18 @@ section {
 }
 
 #search {
+    margin: 5px;
     justify-content: center;
     position: relative;
-    padding: 60px;
-    background: rbga(255, 255, 255, 0.25);
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.05);
     z-index: 100;
     backdrop-filter: blur(25px);
     border-radius: 25px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     border-left: 1px solid rgba(255, 255, 255, 0.25);
-    width: 50%;
+    /* width: 70%; */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -177,19 +173,4 @@ section {
     padding: 10px;
     background-color: var(--secondary-grey);
 
-}
-
-#curiosity-form {
-    color: white;
-    z-index: 1000;
-}
-
-#spirit-form {
-    color: white;
-    z-index: 1000;
-}
-
-#opportunity-form {
-    color: white;
-    z-index: 1000;
 }
