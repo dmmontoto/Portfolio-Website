@@ -24,6 +24,30 @@ curiosityBtn.addEventListener('click', function() {
     searchDescription.innerHTML = 'For the Curiosity rover, images are available starting from August 6th, 2012. The newest available images can be found two days prior to the current date';
     document.getElementById("date-pattern").value = '2012-08-06';
     cameraChoice.value = '';
+
+    // Remove existing options from the datalist
+    const datalist = document.getElementById("cameras");
+    while (datalist.firstChild) {
+        datalist.removeChild(datalist.firstChild);
+    }
+
+    // Add the desired options
+    const cameraOptions = [
+        "Front Hazard Avoidance Camera",
+        "Rear Hazard Avoidance Camera",
+        "Mast Camera",
+        "Chemistry and Camera Complex",
+        "Mars Hand Lens Imager",
+        "Mars Descent Imager",
+        "Navigation Camera"
+    ];
+
+    cameraOptions.forEach(optionValue => {
+        const option = document.createElement("option");
+        option.value = optionValue;
+        datalist.appendChild(option);
+    });
+
     active = 'curiosity';
 });
 
