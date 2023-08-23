@@ -100,7 +100,7 @@
             <input id="rover-camera-input" list="cameras" class="form-control mb-2" type="text" placeholder="Rover Cameras">
             <datalist id="cameras">
               <!-- Placeholders to test how it works -->
-              <option value="Front Hazard Avoidance Camera">
+              <option id="FHAZ" value="Front Hazard Avoidance Camera">
               <option value="Rear Hazard Avoidance Camera">
               <option value="Mast Camera">
               <option value="Chemistry and Camera Complex">
@@ -108,8 +108,11 @@
               <option value="Mars Descent Imager">
               <option value="Navigation Camera">
               <option value="Panoramic Camera">
-              <option value="Miniature Thermal Emission Spectrometer (Mini-TES)">
+              <option value="Miniature Thermal Emission Spectrometer">
             </datalist>
+          </div>
+          <div id="selectors" class="d-flex flex-wrap justify-content-center align-items-center">
+            <button id="search-btn" class="btn btn-primary">Search</button>
           </div>
         </div>
       </div>

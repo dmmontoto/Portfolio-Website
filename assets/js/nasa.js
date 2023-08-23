@@ -12,6 +12,7 @@ document.getElementById("date-pattern").value = datePattern;
 const curiosityBtn = document.getElementById('curiosity');
 const spiritBtn = document.getElementById('spirit');
 const opportunityBtn = document.getElementById('opportunity');
+const searchBtn = document.getElementById('search-btn');
 
 const searchTitle = document.getElementById('search-title');
 const searchDescription = document.getElementById('search-description');
@@ -33,18 +34,19 @@ curiosityBtn.addEventListener('click', function() {
 
     // Add the desired options
     const cameraOptions = [
-        "Front Hazard Avoidance Camera",
-        "Rear Hazard Avoidance Camera",
-        "Mast Camera",
-        "Chemistry and Camera Complex",
-        "Mars Hand Lens Imager",
-        "Mars Descent Imager",
-        "Navigation Camera"
+        { id: "FHAZ", value: "Front Hazard Avoidance Camera" },
+        { id: "RHAZ", value: "Rear Hazard Avoidance Camera" },
+        { id: "MAST", value: "Mast Camera" },
+        { id: "CHEMCAM", value: "Chemistry and Camera Complex" },
+        { id: "MAHLI", value: "Mars Hand Lens Imager" },
+        { id: "MARDI", value: "Mars Descent Imager" },
+        { id: "NAVCAM", value: "Navigation Camera" }
     ];
 
-    cameraOptions.forEach(optionValue => {
+    cameraOptions.forEach(optionData => {
         const option = document.createElement("option");
-        option.value = optionValue;
+        option.id = optionData.id;
+        option.value = optionData.value;
         datalist.appendChild(option);
     });
 
@@ -53,41 +55,92 @@ curiosityBtn.addEventListener('click', function() {
 
 spiritBtn.addEventListener('click', function() {
     searchTitle.innerHTML = 'Search Spirit Images';
-    searchDescription.innerHTML = 'For the Spirit rover, images are available between the dates of January 5th, 2004 to January 11th, 2010.';
-    document.getElementById("date-pattern").value = '2004-01-05';
+    searchDescription.innerHTML = 'For the Spirit rover, images are available between the dates of January 8th, 2004 to January 11th, 2010.';
+    document.getElementById("date-pattern").value = '2004-01-08';
     cameraChoice.value = '';
+
+    // Remove existing options from the datalist
+    const datalist = document.getElementById("cameras");
+    while (datalist.firstChild) {
+        datalist.removeChild(datalist.firstChild);
+    }
+
+    // Add the desired options
+    const cameraOptions = [
+        { id: "FHAZ", value: "Front Hazard Avoidance Camera" },
+        { id: "RHAZ", value: "Rear Hazard Avoidance Camera" },
+        { id: "NAVCAM", value: "Navigation Camera" },
+        { id: "PANCAM", value: "Panoramic Camera"},
+        { id: "MINITES", value: "Miniature Thermal Emission Spectrometer"}
+    ];
+
+    cameraOptions.forEach(optionData => {
+        const option = document.createElement("option");
+        option.id = optionData.id;
+        option.value = optionData.value;
+        datalist.appendChild(option);
+    });
+
     active = 'spirit';
 });
 
 opportunityBtn.addEventListener('click', function() {
     searchTitle.innerHTML = 'Search Opportunity Images';
-    searchDescription.innerHTML = 'For the Opportunity rover, images are available between the dates of January 29th, 2004 to June 11th, 2017.';
-    document.getElementById("date-pattern").value = '2004-01-29';
+    searchDescription.innerHTML = 'For the Opportunity rover, images are available between the dates of January 26th, 2004 to June 11th, 2017.';
+    document.getElementById("date-pattern").value = '2004-01-26';
     cameraChoice.value = '';
+
+    // Remove existing options from the datalist
+    const datalist = document.getElementById("cameras");
+    while (datalist.firstChild) {
+        datalist.removeChild(datalist.firstChild);
+    }
+
+    // Add the desired options
+    const cameraOptions = [
+        { id: "FHAZ", value: "Front Hazard Avoidance Camera" },
+        { id: "RHAZ", value: "Rear Hazard Avoidance Camera" },
+        { id: "NAVCAM", value: "Navigation Camera" },
+        { id: "PANCAM", value: "Panoramic Camera"},
+        { id: "MINITES", value: "Miniature Thermal Emission Spectrometer"}
+    ];
+
+    cameraOptions.forEach(optionData => {
+        const option = document.createElement("option");
+        option.id = optionData.id;
+        option.value = optionData.value;
+        datalist.appendChild(option);
+    });
+
     active = 'opportunity';
 });
 
+searchBtn.addEventListener('click', function() {
+    const dataParam = document.getElementById("date-pattern").value
+    
+});
+
 // Mars Rover
-// function roverSearch(date, roverName, camera) {
-//     const nasaApiKey = '2QbpLQBozt59EwMHuzZseMAHas7Z9Q6X2gVu7UFm';
+function roverSearch(date, roverName, camera) {
+    const nasaApiKey = '2QbpLQBozt59EwMHuzZseMAHas7Z9Q6X2gVu7UFm';
     
-//     const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${date}&camera=${camera}&api_key=${nasaApiKey}`;
+    const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${date}&camera=${camera}&api_key=${nasaApiKey}`;
     
-//     fetch(apiUrl)
-//         .then(response => response.json())
-//         .then(data => {
-//             if (data.photos && data.photos.length > 0) {
-//                 const imageUrl = data.photos[0].img_src;
-//                 const imgElement = document.getElementById('img-display');
-//                 imgElement.src = imageUrl;
-//             } else {
-//                 console.log('No image found for the provided criteria.');
-//             }
-//         })
-//         .catch(error => {
-//             console.error('An error occurred:', error);
-//         });
-// }
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.photos && data.photos.length > 0) {
+                const imageUrl = data.photos[0].img_src;
+                const imgElement = document.getElementById('img-display');
+                imgElement.src = imageUrl;
+            } else {
+                console.log('No image found for the provided criteria.');
+            }
+        })
+        .catch(error => {
+            console.error('An error occurred:', error);
+        });
+}
 // roverSearch('2015-6-3', 'curiosity', 'FHAZ');
 
 //two day turnaround for pics on curiosity

@@ -152,6 +152,7 @@ section {
 
 #selectors {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -172,5 +173,17 @@ section {
     border-radius: 20px;
     padding: 10px;
     background-color: var(--secondary-grey);
+}
 
+#search-btn {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-blue);
+    min-width: 150px;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+#search-btn:hover {
+    background-color: var(--secondary-grey);
 }
