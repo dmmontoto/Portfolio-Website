@@ -188,7 +188,13 @@ section {
     background-color: var(--secondary-grey);
 }
 
-#response img {
+#response {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#response img {
     width: 400px;
 }
