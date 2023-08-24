@@ -9,6 +9,8 @@ const datePattern = `${year}-${month}-${today}`;
 console.log(month);
 document.getElementById("date-pattern").value = datePattern;
 
+console.log(today);
+
 const curiosityBtn = document.getElementById('curiosity');
 const spiritBtn = document.getElementById('spirit');
 const opportunityBtn = document.getElementById('opportunity');
@@ -116,8 +118,54 @@ opportunityBtn.addEventListener('click', function() {
 });
 
 searchBtn.addEventListener('click', function() {
-    const dataParam = document.getElementById("date-pattern").value
-    
+    const dateParam = document.getElementById("date-pattern").value;
+    const [year, month, day] = dateParam.split('-');
+    const parsedYear = parseInt(year);
+    const parsedMonth = parseInt(month);
+    const parsedDay = parseInt(day);
+
+    switch(active) {
+        case "curiosity":
+            if (parsedYear < 2012) {
+                console.log('Invalid date: Year too early');
+            } else if (parsedYear === 2012 && parsedMonth < 8) {
+                console.log('Invalid date: Month too early');
+            } else if (parsedYear === 2012 && parsedMonth === 8 && parsedDay < 6) {
+                console.log('Invalid date: Day too early');
+            } else if (parsedYear === new Date().getFullYear() && parsedMonth === new Date().getMonth() + 1 && parsedDay > new Date().getDate() - 3) {
+                console.log('Invalid date: Too close to today');
+            } else {
+                console.log('Valid date');
+            }  
+        case "spirit":
+            
+    }
+
+
+
+    let camParam;
+    switch(cameraChoice.value) {
+        case "Front Hazard Avoidance Camera":
+            camParam = 'FHAZ';
+        case "Rear Hazard Avoidance Camera":
+            camParam = 'RHAZ';
+        case "Mast Camera":
+            camParam = 'MAST';
+        case "Chemistry and Camera Complex":
+            camParam = 'CHEMCAM';
+        case "Mars Hand Lens Imager":
+            camParam = 'MAHLI';
+        case "Mars Descent Imager":
+            camParam = 'MARDI';
+        case "Navigation Camera":
+            camParam = 'NAVCAM';
+        case "Panoramic Camera":
+            camParam = 'PANCAM';
+        case "Miniature Thermal Emission Spectrometer":
+            camParam = 'MINITES';
+    }
+
+    roverSearch(dateParam, active, camParam);
 });
 
 // Mars Rover
