@@ -187,3 +187,8 @@ section {
 #search-btn:hover {
     background-color: var(--secondary-grey);
 }
+
+#response img {
+    display: flex;
+    width: 400px;
+}

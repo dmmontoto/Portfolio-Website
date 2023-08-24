@@ -24,7 +24,7 @@ let active = '';
 
 curiosityBtn.addEventListener('click', function() {
     searchTitle.innerHTML = 'Search Curiosity Images';
-    searchDescription.innerHTML = 'For the Curiosity rover, images are available starting from August 6th, 2012. The newest available images can be found two days prior to the current date';
+    searchDescription.innerHTML = 'For the Curiosity rover, images are available starting from August 6th, 2012. The newest available images can be found three to four days prior to the current date';
     document.getElementById("date-pattern").value = '2012-08-06';
     cameraChoice.value = '';
 
@@ -186,22 +186,31 @@ searchBtn.addEventListener('click', function() {
     switch(cameraChoice.value) {
         case "Front Hazard Avoidance Camera":
             camParam = 'FHAZ';
+            break;
         case "Rear Hazard Avoidance Camera":
             camParam = 'RHAZ';
+            break;
         case "Mast Camera":
             camParam = 'MAST';
+            break;
         case "Chemistry and Camera Complex":
             camParam = 'CHEMCAM';
+            break;
         case "Mars Hand Lens Imager":
             camParam = 'MAHLI';
+            break;
         case "Mars Descent Imager":
             camParam = 'MARDI';
+            break;
         case "Navigation Camera":
             camParam = 'NAVCAM';
+            break;
         case "Panoramic Camera":
             camParam = 'PANCAM';
+            break;
         case "Miniature Thermal Emission Spectrometer":
             camParam = 'MINITES';
+            break;
         default:
             // please select a camera
     }
@@ -212,24 +221,33 @@ searchBtn.addEventListener('click', function() {
 // Mars Rover
 function roverSearch(date, roverName, camera) {
     const nasaApiKey = '2QbpLQBozt59EwMHuzZseMAHas7Z9Q6X2gVu7UFm';
-
-    const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${date}&camera=${camera}&api_key=${nasaApiKey}`;
-    console.log(apiUrl);
+    const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${date}&camera=${camera}&api_key=${nasaApiKey}&per_page=6`;
+    
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
+            const responseSection = document.getElementById('response');
+            responseSection.innerHTML = ''; // Clear previous content
+            
             if (data.photos && data.photos.length > 0) {
-                const imageUrl = data.photos[0].img_src;
-                const imgElement = document.getElementById('img-display');
-                imgElement.src = imageUrl;
+                data.photos.forEach(photo => {
+                    const imageUrl = photo.img_src;
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imageUrl;
+                    imgElement.className = 'rover-image';
+                    responseSection.appendChild(imgElement);
+                });
             } else {
-                console.log('No image found for the provided criteria.');
+                const noImageMessage = document.createElement('p');
+                noImageMessage.textContent = 'No images found for the provided criteria.';
+                responseSection.appendChild(noImageMessage);
             }
         })
         .catch(error => {
             console.error('An error occurred:', error);
         });
 }
+
 // roverSearch('2015-6-3', 'curiosity', 'FHAZ');
 
 //two day turnaround for pics on curiosity
