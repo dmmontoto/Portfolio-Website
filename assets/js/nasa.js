@@ -118,11 +118,19 @@ opportunityBtn.addEventListener('click', function() {
 });
 
 searchBtn.addEventListener('click', function() {
+    if (active == '') {
+        return;
+    } 
+
     const dateParam = document.getElementById("date-pattern").value;
     const [year, month, day] = dateParam.split('-');
     const parsedYear = parseInt(year);
     const parsedMonth = parseInt(month);
     const parsedDay = parseInt(day);
+
+    if(!parsedYear || !parsedYear || !parsedDay) {
+        return;
+    }
 
     switch(active) {
         case "curiosity":
@@ -137,11 +145,42 @@ searchBtn.addEventListener('click', function() {
             } else {
                 console.log('Valid date');
             }  
+            break;
         case "spirit":
-            
+            if (parsedYear < 2004) {
+                console.log('Invalid year for Spirit');
+            } else if (parsedYear === 2004 && parsedMonth < 1) {
+                console.log('Invalid month for Spirit');
+            } else if (parsedYear === 2004 && parsedMonth === 1 && parsedDay < 5) {
+                console.log('Invalid day for Spirit');
+            } else if (parsedYear > 2019) {
+                console.log('Invalid year for Spirit');
+            } else if (parsedYear === 2019 && parsedMonth > 1) {
+                console.log('Invalid month for Spirit');
+            } else if (parsedYear === 2019 && parsedMonth === 1 && parsedDay > 11) {
+                console.log('Invalid day for Spirit');
+            } else {
+                console.log('Valid date for Spirit');
+            }
+            break;
+        case "opportunity":
+            if (parsedYear < 2004) {
+                console.log('Invalid year for Spirit');
+            } else if (parsedYear === 2004 && parsedMonth < 1) {
+                console.log('Invalid month for Spirit');
+            } else if (parsedYear === 2004 && parsedMonth === 1 && parsedDay < 29) {
+                console.log('Invalid day for Spirit');
+            } else if (parsedYear > 2017) {
+                console.log('Invalid year for Spirit');
+            } else if (parsedYear === 2017 && parsedMonth > 6) {
+                console.log('Invalid month for Spirit');
+            } else if (parsedYear === 2017 && parsedMonth === 6 && parsedDay > 11) {
+                console.log('Invalid day for Spirit');
+            } else {
+                console.log('Valid date for Spirit');
+            }
+            break;
     }
-
-
 
     let camParam;
     switch(cameraChoice.value) {
@@ -163,6 +202,8 @@ searchBtn.addEventListener('click', function() {
             camParam = 'PANCAM';
         case "Miniature Thermal Emission Spectrometer":
             camParam = 'MINITES';
+        default:
+            // please select a camera
     }
 
     roverSearch(dateParam, active, camParam);
@@ -171,9 +212,9 @@ searchBtn.addEventListener('click', function() {
 // Mars Rover
 function roverSearch(date, roverName, camera) {
     const nasaApiKey = '2QbpLQBozt59EwMHuzZseMAHas7Z9Q6X2gVu7UFm';
-    
+
     const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${date}&camera=${camera}&api_key=${nasaApiKey}`;
-    
+    console.log(apiUrl);
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
