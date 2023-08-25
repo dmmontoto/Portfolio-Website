@@ -220,33 +220,63 @@ searchBtn.addEventListener('click', function() {
 
 // Mars Rover
 function roverSearch(date, roverName, camera) {
+    const responseTitle = document.getElementById('response-title');
+    const roverDescription = document.getElementById('rover-description');
+    const youtubeIframe = document.getElementById('youtube-iframe');
+
+    switch(active) {
+        case "curiosity":
+            responseTitle.textContent = 'Curiosity';
+            roverDescription.textContent = 'Paragraph about the rover goes here.';
+            youtubeIframe.src = "https://www.youtube.com/embed/xtDpWGF16po?si=A52tsFI-htn2MXig";
+            break;
+        case "spirit":
+            responseTitle.textContent = 'Spirit';
+            roverDescription.textContent = 'Paragraph about the rover goes here.';
+            youtubeIframe.src = "https://www.youtube.com/embed/UTocjTbLUXs?si=_puVGd1Tk-BuGoYR";
+            break;
+        case "opportunity":
+            responseTitle.textContent = 'Opportunity';
+            roverDescription.textContent = 'Paragraph about the rover goes here.';
+            youtubeIframe.src = "https://www.youtube.com/embed/1Ll-VHYxWXU?si=xdCc8js3Z_DyGtMI";
+            break;
+    }
+    
     const nasaApiKey = '2QbpLQBozt59EwMHuzZseMAHas7Z9Q6X2gVu7UFm';
     const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${date}&camera=${camera}&api_key=${nasaApiKey}&per_page=6`;
-    
+
     fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            const responseSection = document.getElementById('response');
-            responseSection.innerHTML = ''; // Clear previous content
-            
-            if (data.photos && data.photos.length > 0) {
-                data.photos.forEach(photo => {
-                    const imageUrl = photo.img_src;
-                    const imgElement = document.createElement('img');
-                    imgElement.src = imageUrl;
-                    imgElement.className = 'rover-image';
-                    responseSection.appendChild(imgElement);
-                });
-            } else {
-                const noImageMessage = document.createElement('p');
-                noImageMessage.textContent = 'No images found for the provided criteria.';
-                responseSection.appendChild(noImageMessage);
-            }
-        })
-        .catch(error => {
-            console.error('An error occurred:', error);
-        });
+    .then(response => response.json())
+    .then(data => {
+        const slideshowInner = document.getElementById('slideshow-inner');
+
+        slideshowInner.innerHTML = ''; // Clear previous content
+
+        if (data.photos && data.photos.length > 0) {
+            data.photos.forEach((photo, index) => {
+                const imageUrl = photo.img_src;
+
+                const slideDiv = document.createElement('div');
+                slideDiv.className = index === 0 ? 'carousel-item active' : 'carousel-item';
+
+                const imgElement = document.createElement('img');
+                imgElement.src = imageUrl;
+                imgElement.className = 'd-block w-100';
+
+                slideDiv.appendChild(imgElement);
+                slideshowInner.appendChild(slideDiv);
+            });
+        } else {
+            const noImageMessage = document.createElement('p');
+            noImageMessage.textContent = 'No images found for the provided criteria.';
+            slideshowInner.appendChild(noImageMessage);
+        }
+    })
+    .catch(error => {
+        console.error('An error occurred:', error);
+    });
 }
+
 
 // roverSearch('2015-6-3', 'curiosity', 'FHAZ');
 

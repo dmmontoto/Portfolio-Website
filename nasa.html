@@ -99,7 +99,6 @@
             <input type="date" id="date-pattern" class="form-control me-2 mb-2">
             <input id="rover-camera-input" list="cameras" class="form-control mb-2" type="text" placeholder="Rover Cameras">
             <datalist id="cameras">
-              <!-- Placeholders to test how it works -->
                 <option value="Front Hazard Avoidance Camera">
                 <option value="Rear Hazard Avoidance Camera">
                 <option value="Mast Camera">
@@ -119,54 +118,31 @@
     </section>
 
     <section id="response">
-      
-    </section>
-    
-
-    <!-- <div class="container">
+      <h2 id="response-title"></h2>
       <div class="row">
-        <div class="col-md-4" id="curiosity-form">
-          <h1>Curiosity</h1>
+        <div class="col-lg-6">
+          <div id="rover-details">
+            <p id="rover-description"></p>
+            <iframe id="youtube-iframe" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
-        <div class="col-md-4" id="spirit-form">
-          <h1>Spirit</h1>
-        </div>
-        <div class="col-md-4" id="opportunity-form">
-          <h1>Opportunity</h1>
+        <div class="col-lg-6">
+          <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+            <div id="slideshow-inner" class="carousel-inner"></div>
+            <a class="carousel-control-prev" href="#slideshow" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#slideshow" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div> -->
-
-
-      <!-- <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div id="nasaLogo">
-              <img id="nasa-img" src="assets/images/NASA.png">
-              <h1 id="nasa-title">Mars Image Generator</h1>
-            </div>
-            <div id="nasa-display">
-              <img id="img-display">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="glass-container">
-              <div class="glass-card">
-                <div class="glass-content">
-                  <h2>A Pathway to Impact</h2>
-                  <p>Over the past year, I've relentlessly pursued knowledge and skill enhancement, diving deep into software engineering. I've explored data structures, version control, 
-                    server architecture, and web development. My toolkit includes languages like Javascript, C++, Java, C, Python, ARM Assembly, R, and MATLAB, each providing a unique lens 
-                    for tackling challenges. With frameworks like Node.js, Express.js, and React.js, I've built proficiency in the MERN stack. Tools like Sequelize, Git, and Visual Studio Code 
-                    enable collaborative project development. I've mastered HTML, CSS, Bootstrap, JavaScript, DOM manipulation, APIs, JQuery, JSON, and AJAX, creating engaging user experiences. 
-                    This journey is perpetual, presenting daily opportunities to learn and innovate. My commitment goes beyond mastery—it's about using these skills to create impactful change in 
-                    the real world, a promise I'm dedicated to fulfilling.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+    </section>
+    
+    
     </main>
   </body>
 

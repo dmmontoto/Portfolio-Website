@@ -188,13 +188,44 @@ section {
     background-color: var(--secondary-grey);
 }
 
-#response {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+#response-title {
+    color: white;
+    text-align: center; /* Center the title horizontally */
+    padding: 20px 0; /* Add some space around the title */
+    font-size: 30px;
 }
 
-#response img {
-    width: 400px;
+#response {
+    display: flex;
+    flex-direction: column; /* Stack the columns vertically */
+    align-items: center; /* Center the columns horizontally */
+    padding: 20px; /* Add some space around the columns */
+}
+
+#response .row {
+    width: 100%; /* Make the row take up the full width of the page */
+    display: flex;
+    justify-content: space-between; /* Distribute columns evenly */
+    align-items: flex-start;
+    margin-bottom: 20px; /* Add spacing between rows */
+}
+
+#response .col {
+    flex-basis: calc(50% - 20px); /* Set the width of each column */
+    padding: 0 10px; /* Add some space inside each column */
+}
+
+#response p {
+    color: white;
+    font-size: 18px;
+}
+
+#response iframe {
+    width: 100%; /* Make the iframe take up the full width */
+    height: 300px; /* Set your desired height */
+}
+
+#slideshow .carousel-inner img {
+    max-width: 100%; /* Make sure images fit within the container */
+    height: auto; /* Maintain aspect ratio */
 }
