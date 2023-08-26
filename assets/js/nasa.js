@@ -227,7 +227,12 @@ function roverSearch(date, roverName, camera) {
     switch(active) {
         case "curiosity":
             responseTitle.textContent = 'Curiosity';
-            roverDescription.textContent = 'Paragraph about the rover goes here.';
+            roverDescription.innerHTML = `The <a href="https://mars.nasa.gov/msl/home/"><span style="color: var(--main-blue);">Curiosity</span></a> rover, 
+            also known as the Mars Science Laboratory (MSL), is a car-sized rover designed to explore Mars. Launched by NASA on November 26, 2011, and successfully
+             landed on Mars on August 6, 2012, Curiosity's primary goal is to study the Martian climate and geology to assess whether the planet could have ever 
+             supported microbial life. It has made remarkable discoveries, including finding evidence of ancient riverbeds and confirming the presence of water in the 
+             planet's past. Curiosity continues to investigate Mars' surface, sending back valuable data and images that contribute to our understanding of the 
+             Red Planet's history and potential habitability.`;
             youtubeIframe.src = "https://www.youtube.com/embed/xtDpWGF16po?si=A52tsFI-htn2MXig";
             break;
         case "spirit":
@@ -252,7 +257,7 @@ function roverSearch(date, roverName, camera) {
         const slideshow = document.getElementById('slideshow');
 
         slideshowInner.innerHTML = ''; // Clear previous content
-
+        let count = 0;
         if (data.photos && data.photos.length > 0) {
             // Add images to slideshow
             data.photos.forEach((photo, index) => {
@@ -267,10 +272,12 @@ function roverSearch(date, roverName, camera) {
 
                 slideDiv.appendChild(imgElement);
                 slideshowInner.appendChild(slideDiv);
-            });
+                count++;
+            }); 
 
-            // Show carousel control buttons
-            slideshow.innerHTML += `
+            if (count !== 0) {
+                // Show carousel control buttons
+                slideshow.innerHTML += `
                 <a class="carousel-control-prev" href="#slideshow" role="button" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
@@ -279,14 +286,16 @@ function roverSearch(date, roverName, camera) {
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </a>
-            `;
+                `;
+            }
 
-            responseSection.scrollIntoView({ behavior: 'smooth' });
         } else {
             const noImageMessage = document.createElement('p');
             noImageMessage.textContent = 'No images found for the provided criteria.';
             slideshowInner.appendChild(noImageMessage);
         }
+
+        responseSection.scrollIntoView({ behavior: 'smooth' });
     })
     .catch(error => {
         console.error('An error occurred:', error);
