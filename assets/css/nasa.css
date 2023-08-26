@@ -189,10 +189,12 @@ section {
 }
 
 #response-title {
-    color: white;
     text-align: center; /* Center the title horizontally */
     padding: 20px 0; /* Add some space around the title */
-    font-size: 30px;
+    font-size: 50px;
+    margin-top: 100px;
+    color: rgb(193, 21, 21);
+    font-family: 'Abril Fatface', cursive;
 }
 
 #response {

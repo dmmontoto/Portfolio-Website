@@ -218,8 +218,8 @@ searchBtn.addEventListener('click', function() {
     roverSearch(dateParam, active, camParam);
 });
 
-// Mars Rover
 function roverSearch(date, roverName, camera) {
+    const responseSection = document.getElementById('response');
     const responseTitle = document.getElementById('response-title');
     const roverDescription = document.getElementById('rover-description');
     const youtubeIframe = document.getElementById('youtube-iframe');
@@ -249,10 +249,12 @@ function roverSearch(date, roverName, camera) {
     .then(response => response.json())
     .then(data => {
         const slideshowInner = document.getElementById('slideshow-inner');
+        const slideshow = document.getElementById('slideshow');
 
         slideshowInner.innerHTML = ''; // Clear previous content
 
         if (data.photos && data.photos.length > 0) {
+            // Add images to slideshow
             data.photos.forEach((photo, index) => {
                 const imageUrl = photo.img_src;
 
@@ -266,6 +268,20 @@ function roverSearch(date, roverName, camera) {
                 slideDiv.appendChild(imgElement);
                 slideshowInner.appendChild(slideDiv);
             });
+
+            // Show carousel control buttons
+            slideshow.innerHTML += `
+                <a class="carousel-control-prev" href="#slideshow" role="button" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#slideshow" role="button" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </a>
+            `;
+
+            responseSection.scrollIntoView({ behavior: 'smooth' });
         } else {
             const noImageMessage = document.createElement('p');
             noImageMessage.textContent = 'No images found for the provided criteria.';
@@ -276,14 +292,3 @@ function roverSearch(date, roverName, camera) {
         console.error('An error occurred:', error);
     });
 }
-
-
-// roverSearch('2015-6-3', 'curiosity', 'FHAZ');
-
-//two day turnaround for pics on curiosity
-// curiosity August 6, 2012 
-// live
-// spirit January 5, 2004 
-// The last communication from the Mars Rover Spirit occurred on January 11, 2010
-// January 29, 2004 
-// Opportunity's last communication with Earth was on June 11 2017
