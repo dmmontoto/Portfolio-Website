@@ -175,6 +175,12 @@ section {
     background-color: var(--secondary-grey);
 }
 
+#search-alert {
+    color: rgb(193, 21, 21);
+    text-align: center;
+    margin: 20px;
+}
+
 #search-btn {
     align-items: center;
     justify-content: center;
@@ -193,7 +199,7 @@ section {
     padding: 20px 0; /* Add some space around the title */
     font-size: 50px;
     margin-top: 100px;
-    color: rgb(193, 21, 21);
+    color: var(--main-blue);
     font-family: 'Abril Fatface', cursive;
 }
 
@@ -223,9 +229,20 @@ section {
 
 #response p {
     color: white;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace; 
-    line-height: 25px;
+    font-size: 25px;
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 32px;
+}
+
+#slideshow {
+    text-align: center;
+}
+
+#slideshow p {
+    color: rgb(193, 21, 21);
+    font-size: 30px;
+    font-family: 'Nanum Myeongjo', serif;
+    width: 60%;
 }
 
 #response iframe {

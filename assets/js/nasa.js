@@ -15,6 +15,7 @@ const curiosityBtn = document.getElementById('curiosity');
 const spiritBtn = document.getElementById('spirit');
 const opportunityBtn = document.getElementById('opportunity');
 const searchBtn = document.getElementById('search-btn');
+const searchAlert = document.getElementById('search-alert');
 
 const searchTitle = document.getElementById('search-title');
 const searchDescription = document.getElementById('search-description');
@@ -53,11 +54,12 @@ curiosityBtn.addEventListener('click', function() {
     });
 
     active = 'curiosity';
+    searchAlert.innerHTML = '';
 });
 
 spiritBtn.addEventListener('click', function() {
     searchTitle.innerHTML = 'Search Spirit Images';
-    searchDescription.innerHTML = 'For the Spirit rover, images are available between the dates of January 8th, 2004 to January 11th, 2010.';
+    searchDescription.innerHTML = 'For the Spirit rover, images are available between the dates of January 8th, 2004 to January 10th, 2010.';
     document.getElementById("date-pattern").value = '2004-01-08';
     cameraChoice.value = '';
 
@@ -84,6 +86,7 @@ spiritBtn.addEventListener('click', function() {
     });
 
     active = 'spirit';
+    searchAlert.innerHTML = '';
 });
 
 opportunityBtn.addEventListener('click', function() {
@@ -115,6 +118,7 @@ opportunityBtn.addEventListener('click', function() {
     });
 
     active = 'opportunity';
+    searchAlert.innerHTML = '';
 });
 
 searchBtn.addEventListener('click', function() {
@@ -153,11 +157,11 @@ searchBtn.addEventListener('click', function() {
                 console.log('Invalid month for Spirit');
             } else if (parsedYear === 2004 && parsedMonth === 1 && parsedDay < 5) {
                 console.log('Invalid day for Spirit');
-            } else if (parsedYear > 2019) {
+            } else if (parsedYear > 2010) {
                 console.log('Invalid year for Spirit');
-            } else if (parsedYear === 2019 && parsedMonth > 1) {
+            } else if (parsedYear === 2010 && parsedMonth > 1) {
                 console.log('Invalid month for Spirit');
-            } else if (parsedYear === 2019 && parsedMonth === 1 && parsedDay > 11) {
+            } else if (parsedYear === 2010 && parsedMonth === 1 && parsedDay > 10) {
                 console.log('Invalid day for Spirit');
             } else {
                 console.log('Valid date for Spirit');
@@ -237,12 +241,20 @@ function roverSearch(date, roverName, camera) {
             break;
         case "spirit":
             responseTitle.textContent = 'Spirit';
-            roverDescription.textContent = 'Paragraph about the rover goes here.';
+            roverDescription.innerHTML = `The <a href="https://solarsystem.nasa.gov/missions/spirit/in-depth/"><span style="color: var(--main-blue);">Spirit</span></a> 
+            rover was a vital part of NASA's Mars Exploration Rover mission. It landed on Mars on January 4, 2004, with a mission focused on studying the planet's geology 
+            and searching for signs of past water activity. Designed for a 90-day mission, Spirit far exceeded expectations and operated for over six years, providing valuable 
+            insights into the Martian environment. The rover helped identify the presence of volcanic rocks, ancient river channels, and evidence of past water flows. Although 
+            its mission ended in 2010 after getting stuck in sand, Spirit's legacy continues to contribute to our understanding of the Red Planet's history and geology.`;
             youtubeIframe.src = "https://www.youtube.com/embed/UTocjTbLUXs?si=_puVGd1Tk-BuGoYR";
             break;
         case "opportunity":
             responseTitle.textContent = 'Opportunity';
-            roverDescription.textContent = 'Paragraph about the rover goes here.';
+            roverDescription.innerHTML = `The <a href="https://solarsystem.nasa.gov/missions/opportunity/in-depth/"><span style="color: var(--main-blue);">Opportunity</span></a> 
+            rover was a remarkable part of NASA's Mars Exploration Rover mission. Touching down on Mars on January 25, 2004, Opportunity exceeded all expectations by continuing 
+            its mission for nearly 15 years. Its exploration of the Martian surface provided invaluable insights into the planet's history and geology. Opportunity's discoveries 
+            included evidence of past water on Mars and geological features that suggested a watery environment in the planet's past. The rover's remarkable longevity and the scientific 
+            data it gathered significantly expanded our understanding of Mars and its potential for past habitability.`;
             youtubeIframe.src = "https://www.youtube.com/embed/1Ll-VHYxWXU?si=xdCc8js3Z_DyGtMI";
             break;
     }
@@ -291,7 +303,8 @@ function roverSearch(date, roverName, camera) {
 
         } else {
             const noImageMessage = document.createElement('p');
-            noImageMessage.textContent = 'No images found for the provided criteria.';
+            noImageMessage.textContent = `** No images were found for the selected criteria. It's possible that the chosen camera didn't capture any photographs on the specified date. 
+            You might consider trying a different date or selecting a different camera. **`;
             slideshowInner.appendChild(noImageMessage);
         }
 
