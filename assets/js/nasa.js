@@ -122,6 +122,7 @@ opportunityBtn.addEventListener('click', function() {
 });
 
 searchBtn.addEventListener('click', function() {
+    searchAlert.innerHTML = '';
     if (active == '') {
         return;
     } 
@@ -134,56 +135,6 @@ searchBtn.addEventListener('click', function() {
 
     if(!parsedYear || !parsedYear || !parsedDay) {
         return;
-    }
-
-    switch(active) {
-        case "curiosity":
-            if (parsedYear < 2012) {
-                console.log('Invalid date: Year too early');
-            } else if (parsedYear === 2012 && parsedMonth < 8) {
-                console.log('Invalid date: Month too early');
-            } else if (parsedYear === 2012 && parsedMonth === 8 && parsedDay < 6) {
-                console.log('Invalid date: Day too early');
-            } else if (parsedYear === new Date().getFullYear() && parsedMonth === new Date().getMonth() + 1 && parsedDay > new Date().getDate() - 3) {
-                console.log('Invalid date: Too close to today');
-            } else {
-                console.log('Valid date');
-            }  
-            break;
-        case "spirit":
-            if (parsedYear < 2004) {
-                console.log('Invalid year for Spirit');
-            } else if (parsedYear === 2004 && parsedMonth < 1) {
-                console.log('Invalid month for Spirit');
-            } else if (parsedYear === 2004 && parsedMonth === 1 && parsedDay < 5) {
-                console.log('Invalid day for Spirit');
-            } else if (parsedYear > 2010) {
-                console.log('Invalid year for Spirit');
-            } else if (parsedYear === 2010 && parsedMonth > 1) {
-                console.log('Invalid month for Spirit');
-            } else if (parsedYear === 2010 && parsedMonth === 1 && parsedDay > 10) {
-                console.log('Invalid day for Spirit');
-            } else {
-                console.log('Valid date for Spirit');
-            }
-            break;
-        case "opportunity":
-            if (parsedYear < 2004) {
-                console.log('Invalid year for Spirit');
-            } else if (parsedYear === 2004 && parsedMonth < 1) {
-                console.log('Invalid month for Spirit');
-            } else if (parsedYear === 2004 && parsedMonth === 1 && parsedDay < 29) {
-                console.log('Invalid day for Spirit');
-            } else if (parsedYear > 2017) {
-                console.log('Invalid year for Spirit');
-            } else if (parsedYear === 2017 && parsedMonth > 6) {
-                console.log('Invalid month for Spirit');
-            } else if (parsedYear === 2017 && parsedMonth === 6 && parsedDay > 11) {
-                console.log('Invalid day for Spirit');
-            } else {
-                console.log('Valid date for Spirit');
-            }
-            break;
     }
 
     let camParam;
@@ -216,7 +167,74 @@ searchBtn.addEventListener('click', function() {
             camParam = 'MINITES';
             break;
         default:
-            // please select a camera
+            searchAlert.innerHTML = 'Please select a camera';
+            return;
+    }
+
+    switch(active) {
+        case "curiosity":
+            if (parsedYear < 2012) {
+                searchAlert.innerHTML = 'Invalid date: Too early for the Curiosity rover';
+                return;
+            } else if (parsedYear === 2012 && parsedMonth < 8) {
+                searchAlert.innerHTML = 'Invalid date: Too early for the Curiosity rover';
+                return;
+            } else if (parsedYear === 2012 && parsedMonth === 8 && parsedDay < 6) {
+                searchAlert.innerHTML = 'Invalid date: Too early for the Curiosity rover';
+                return;
+            } else if (parsedYear === new Date().getFullYear() && parsedMonth === new Date().getMonth() + 1 && parsedDay > new Date().getDate() - 3) {
+                searchAlert.innerHTML = 'Invalid date: Too close to today';
+                return;
+            } else {
+                break;
+            }  
+            break;
+        case "spirit":
+            if (parsedYear < 2004) {
+                searchAlert.innerHTML = 'Invalid date: Too early for the Spirit rover';
+                return;
+            } else if (parsedYear === 2004 && parsedMonth < 1) {
+                searchAlert.innerHTML = 'Invalid date: Too early for the Spirit rover';
+                return;
+            } else if (parsedYear === 2004 && parsedMonth === 1 && parsedDay < 5) {
+                searchAlert.innerHTML = 'Invalid date: Too early for the Spirit rover';
+                return;
+            } else if (parsedYear > 2010) {
+                searchAlert.innerHTML = 'Invalid date: Last available date is January 10th, 2010';
+                return;
+            } else if (parsedYear === 2010 && parsedMonth > 1) {
+                searchAlert.innerHTML = 'Invalid date: Last available date is January 10th, 2010';
+                return;
+            } else if (parsedYear === 2010 && parsedMonth === 1 && parsedDay > 10) {
+                searchAlert.innerHTML = 'Invalid date: Last available date is January 10th, 2010';
+                return;
+            } else {
+                break;
+            }
+            break;
+        case "opportunity":
+            if (parsedYear < 2004) {
+                searchAlert.innerHTML = 'Invalid date: Too early for the Opportunity rover';
+                return;
+            } else if (parsedYear === 2004 && parsedMonth < 1) {
+                searchAlert.innerHTML = 'Invalid date: Too early for the Opportunity rover';
+                return;
+            } else if (parsedYear === 2004 && parsedMonth === 1 && parsedDay < 29) {
+                searchAlert.innerHTML = 'Invalid date: Too early for the Opportunity rover';
+                return;
+            } else if (parsedYear > 2017) {
+                searchAlert.innerHTML = 'Invalid date: Last available date is June 11th, 2017';
+                return;
+            } else if (parsedYear === 2017 && parsedMonth > 6) {
+                searchAlert.innerHTML = 'Invalid date: Last available date is June 11th, 2017';
+                return;
+            } else if (parsedYear === 2017 && parsedMonth === 6 && parsedDay > 11) {
+                searchAlert.innerHTML = 'Invalid date: Last available date is June 11th, 2017';
+                return;
+            } else {
+                break;
+            }
+            break;
     }
 
     roverSearch(dateParam, active, camParam);
