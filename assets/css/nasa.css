@@ -249,6 +249,7 @@ section {
 #response iframe {
     width: 100%; /* Make the iframe take up the full width */
     height: 300px; /* Set your desired height */
+    margin-bottom: 100px;
 }
 
 #slideshow .carousel-inner img {
