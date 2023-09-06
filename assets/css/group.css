@@ -81,8 +81,8 @@
 }
 
 #project-container {
-    justify-content: center;
-    position: relative;
+    /* justify-content: center;
+    position: relative; */
     padding: 50px;
     background: rgba(126, 135, 195, 0.05);
     z-index: 100;
@@ -91,11 +91,15 @@
     border: 1px solid var(--main-blue);
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     border-left: 1px solid rgba(255, 255, 255, 0.25); */
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
 }
 
+#project-title {
+    text-align: center;
+    font-size: 25px;
+}
   
 #test {
     color: white;
@@ -103,4 +107,123 @@
 
 #project-container iframe {
     width: 100%;
+}
+
+#gif {
+    width: 95%;
+}
+
+#button {
+    position: relative;
+    list-style: none;
+    /* width: 20%; */
+    background: #3e3f46;
+    padding: 20px;
+    margin-top: 100px;
+    margin-right: 20px;
+    z-index: var(--i);
+    transition: 0.5s;
+}
+
+#button:hover {
+    background: var(--main-blue);
+    transform: translateY(-10px);
+}
+
+#button::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: #28282b;
+    top: 0;
+    left: -20px;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+#button:hover::before {
+    background: #030B1D;
+}
+
+#button::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #34353a;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+#button:last-child::after {
+    box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
+}
+
+#button:hover::after {
+    background: #0D3A5E;
+}
+
+#button a {
+    text-decoration: none;
+    color: var(--secondary-grey);
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+}
+
+#button:hover a {
+    color: white;
+}
+
+
+
+/* Styles for the ul with id "bullets" */
+#bullets {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove default list padding */
+}
+
+/* Styles for the li elements inside the "bullets" list */
+#bullets li {
+    position: relative; /* Required for pseudo-elements */
+    padding-left: 1ch;
+}
+
+/* Style the ::marker pseudo-element for the first li */
+#bullets li:nth-child(1)::before {
+    content: "»";
+    font-size: 3em;
+    color: rgb(23, 91, 147);
+    position: absolute;
+    left: 0;
+}
+
+/* Style the ::marker pseudo-element for the second li */
+#bullets li:nth-child(2)::before {
+    content: "»";
+    font-size: 2.5em;
+    color: rgb(23, 57, 102); /* Adjust the values as needed */
+    position: absolute;
+    left: 0;
+}
+
+/* Style the ::marker pseudo-element for the third li */
+#bullets li:nth-child(3)::before {
+    content: "»";
+    font-size: 2em;
+    background: #3e3f46;
+    color: transparent; /* Make the marker transparent */
+    position: absolute;
+    left: 0;
+}
+
+/* Optional: Set a maximum width for the list */
+#bullets ul, #bullets ol {
+    max-width: 35ch;
 }

@@ -88,6 +88,7 @@
           <div class="container">
             <div class="row" id="main-holder">
               <div class="col-md-3" id="selector-holder">
+                <!-- Your project selector content -->
                 <ul id="project-selector" class="list-unstyled">
                   <li style="--i:3;"><a href="#">Movie Munchies</a></li>
                   <li style="--i:2;"><a href="#">Group Project 2</a></li>
@@ -95,8 +96,25 @@
                 </ul>
               </div>
               <div class="col-md-9">
-                <div id="project-container">
-                  <img src="assets/images/GP1slidePreview.gif" alt="Animated Movie Munchies Example">
+                <div id="project-container" class="row">
+                  <h3 id="project-title">Movie Munchies</h3>
+                  <!-- Left column for image -->
+                  <div class="col-md-6">
+                    <img id="gif" src="assets/images/GP1slidePreview.gif" alt="Animated Movie Munchies Example">
+                  </div>
+                  <!-- Right column for descriptive info and buttons -->
+                  <div class="col-md-6">
+                    <div id="project-info">
+                      <!-- Add descriptive info and buttons here -->
+                      <ul id="bullets">
+                        <li>Collaborated with classmates Marissa and Huaquin to devise an innovative method for pairing movies and recipes to enhance the overall entertainment experience.</li>
+                        <li>Demonstrated proficiency in integrating two distinct APIs, one for movie searching and another for recipe retrieval, ensuring seamless data integration and retrieval.</li>
+                        <li>Assumed a leadership role in spearheading the development of the JavaScript framework, overseeing its architecture and implementation to ensure a robust and efficient solution.</li>
+                      </ul>
+                      <button class="btn btn-primary" id="button">Button 1</button>
+                      <button class="btn btn-secondary" id="button">Button 2</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
