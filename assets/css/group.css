@@ -128,6 +128,9 @@
     z-index: var(--i);
     transition: 0.5s;
     color: var(--secondary-grey);
+    letter-spacing: 0.1em;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 20px;
 }
 
 #button:hover {
