@@ -5,12 +5,15 @@
 #selector-holder {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
 #project-selector {
     position: relative;
     transform: skewY(-15deg);
     padding: 30px;
+    justify-content: center;
+    align-content: center;
 }
 
 #project-selector li {
@@ -117,7 +120,10 @@
     width: 95%;
 }
 
-#button {
+#button,
+#live-link,
+#git-link,
+#slide-link {
     position: relative;
     list-style: none;
     width: 100%;
@@ -133,12 +139,18 @@
     font-size: 20px;
 }
 
-#button:hover {
+#button:hover,
+#live-link:hover,
+#git-link:hover,
+#slide-link:hover {
     background: var(--main-blue);
     transform: translateY(-10px);
 }
 
-#button::before {
+#button::before,
+#live-link::before, 
+#git-link::before, 
+#slide-link::before {
     content: '';
     position: absolute;
     width: 20px;
@@ -151,11 +163,17 @@
     transition: 0.5s;
 }
 
-#button:hover::before {
+#button:hover::before,
+#live-link:hover::before,
+#git-link:hover::before,
+#slide-link:hover::before {
     background: #030B1D;
 }
 
-#button::after {
+#button::after,
+#live-link::after,
+#git-link::after,
+#slide-link::after {
     content: '';
     position: absolute;
     top: -20px;
@@ -168,7 +186,10 @@
     transition: 0.5s;
 }
 
-#button:last-child::after {
+#button:last-child::after,
+#live-link:last-child::after,
+#git-link:last-child::after,
+#slide-link:last-child::after {
     box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
 }
 

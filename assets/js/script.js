@@ -67,59 +67,6 @@ function clock() {
 }
 clock();
 
-// Mars Rover
-function roverSearch(date, roverName, camera) {
-    const nasaApiKey = '2QbpLQBozt59EwMHuzZseMAHas7Z9Q6X2gVu7UFm';
-    
-    const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?earth_date=${date}&camera=${camera}&api_key=${nasaApiKey}`;
-    
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            if (data.photos && data.photos.length > 0) {
-                const imageUrl = data.photos[0].img_src;
-                const imgElement = document.getElementById('img-display');
-                imgElement.src = imageUrl;
-            } else {
-                console.log('No image found for the provided criteria.');
-            }
-        })
-        .catch(error => {
-            console.error('An error occurred:', error);
-        });
-}
-roverSearch('2015-6-3', 'curiosity', 'FHAZ');
-
-
-// $(document).ready(function() {
-//     var droneBox = $("#drone-box");
-//     var droneBackground = $("#drone-background");
-
-//     droneBackground.mousemove(function(e) {
-//         var droneBoxWidth = droneBackground.width();
-//         var droneBoxHeight = droneBackground.height();
-
-//         var droneBackgroundOffset = droneBackground.offset();
-//         var droneBackgroundWidth = droneBackground.width();
-//         var droneBackgroundHeight = droneBackground.height();
-
-//         var mouseX = e.pageX - droneBackgroundOffset.left;
-//         var mouseY = e.pageY - droneBackgroundOffset.top;
-
-//         var moveX = mouseX - droneBoxWidth / 2;
-//         var moveY = mouseY -50- droneBoxHeight / 2;
-
-//         moveX = Math.min(Math.max(moveX, -droneBoxWidth / 2), droneBackgroundWidth - droneBoxWidth / 2);
-//         moveY = Math.min(Math.max(moveY, -droneBoxHeight / 2), droneBackgroundHeight - droneBoxHeight / 2);
-
-//         droneBox.css({
-//             'transform': 'translate3d(' + moveX + 'px, ' + moveY + 'px, 0)'
-//         });
-//     });
-// });
-
-
-
 // Drone 
 $(document).ready(function() {
     var droneBox = $("#drone-box");

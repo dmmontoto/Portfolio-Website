@@ -17,60 +17,60 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-        <div class="container">
-          <a class="navbar-brand fs-4" href="#">Portfolio</a>
-          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <!-- Sidebar-->
-          <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-  
-            <!-- Sidebar Header-->
-            <div class="offcanvas-header text-white border-bottom">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-              <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-  
-            <!-- Sidebar Body-->
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-                <li class="nav-item mx-2">
-                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link" aria-current="page" href="aboutme.html">About Me</a>
-                </li>
-                <li class="nav-item dropdown mx-2">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Projects
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="nasa.html">NASA Project</a></li>
-                    <li><a class="dropdown-item" href="#">Stock Project</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">NBA Analytics Project</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link active" aria-current="page" href="groupproject.html">Group Projects</a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link" aria-current="page" href="#">Learn with Me</a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link" aria-current="page" href="resume.html">Resume</a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link" aria-current="page" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
+      <div class="container">
+        <!-- <a class="navbar-brand fs-4" href="#">Portfolio</a> -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Sidebar-->
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+          <!-- Sidebar Header-->
+          <div class="offcanvas-header text-white border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Portfolio</h5>
+            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <!-- Sidebar Body-->
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="aboutme.html">About Me</a>
+              </li>
+              <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="nasa.html">NASA Project</a></li>
+                  <li><a class="dropdown-item" href="#">Stock Project</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">NBA Analytics Project</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" href="groupproject.html">Group Projects</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="#">Learn with Me</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="resume.html">Resume</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="#">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
     <main>
           <div class="container">
@@ -78,9 +78,9 @@
               <div class="col-md-3" id="selector-holder">
                 <!-- Your project selector content -->
                 <ul id="project-selector" class="list-unstyled">
-                  <li style="--i:3;"><a href="#">Movie Munchies</a></li>
-                  <li style="--i:2;"><a href="#">Group Project 2</a></li>
-                  <li style="--i:1;"><a href="#">Group Project 3</a></li>
+                  <li style="--i:3;"><a href="#" id="movie-munchies-link">Movie Munchies</a></li>
+                  <li style="--i:2;"><a href="#" id="group-project-2-link">Group Project 2</a></li>
+                  <li style="--i:1;"><a href="#" id="group-project-3-link">Group Project 3</a></li>
                 </ul>
               </div>
               <div class="col-md-9">
@@ -103,13 +103,13 @@
                   </div>
                   <div class="row">
                     <div class="col-md-4">
-                      <a href="https://marissacraig.github.io/MovieMunchies/index.html" class="btn" id="button" target="_blank">Deployed Site</a>
+                      <a href="https://marissacraig.github.io/MovieMunchies/index.html" class="btn" id="live-link" target="_blank">Deployed Site</a>
                     </div>
                     <div class="col-md-4">
-                      <a href="https://github.com/marissacraig/MovieMunchies" class="btn" id="button" target="_blank">Github Repo</a>
+                      <a href="https://github.com/marissacraig/MovieMunchies" class="btn" id="git-link" target="_blank">Github Repo</a>
                     </div>
                     <div class="col-md-4">
-                      <a href="https://docs.google.com/presentation/d/16Ui0aU5dYNfOJJWxAHonK7zQYjUEIc_ZZdvr3sT7JNM/edit?pli=1#slide=id.g29f43f0a72_0_24" class="btn" id="button" target="_blank">Presentation</a>
+                      <a href="https://docs.google.com/presentation/d/16Ui0aU5dYNfOJJWxAHonK7zQYjUEIc_ZZdvr3sT7JNM/edit?pli=1#slide=id.g29f43f0a72_0_24" class="btn" id="slide-link" target="_blank">Presentation</a>
                     </div>
                   </div>
                 </div>
@@ -120,5 +120,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="./assets/js/script.js"></script>
+<script src="assets/js/group.js"></script>
 </html>
