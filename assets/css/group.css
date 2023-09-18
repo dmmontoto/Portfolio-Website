@@ -193,11 +193,17 @@
     box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
 }
 
-#button:hover::after {
+#button:hover::after,
+#live-link:hover::after,
+#git-link:hover::after,
+#slide-link:hover::after {
     background: #0D3A5E;
 }
 
-#button a {
+#button a,
+#live-link a,
+#git-link a,
+#slide-link a {
     text-decoration: none;
     color: var(--secondary-grey);
     display: block;
@@ -206,7 +212,10 @@
     transition: 0.5s;
 }
 
-#button:hover a {
+#button:hover a,
+#live-link:hover a,
+#git-link:hover a, 
+#slide-link:hover a {
     color: white;
 }
 

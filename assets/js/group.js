@@ -3,7 +3,10 @@ const groupProject2Link = document.getElementById("group-project-2-link");
 const groupProject3Link = document.getElementById("group-project-3-link");
 
 // movieMunchiesLink.addEventListener("click", fillMovieMunchiesInfo);
-groupProject2Link.addEventListener("click", makeInfoBlack);
+groupProject2Link.addEventListener("click", function() {
+    console.log("TEST");
+    makeInfoBlack();
+});
 
 movieMunchiesLink.addEventListener("click", function() {
     console.log("TEST");
@@ -34,9 +37,16 @@ function fillMovieMunchiesInfo() {
   
   // Function to make all information black for Group Project 2
   function makeInfoBlack() {
-    // Get reference to the project-container element
-    const projectContainer = document.getElementById("project-container");
+    const projectTitle = document.getElementById("project-title");
+    const gifImage = document.getElementById("gif");
+    const bulletsList = document.getElementById("bullets");
+    const deployedSiteLink = document.getElementById("live-link");
+    const githubRepoLink = document.getElementById("git-link");
+    const presentationLink = document.getElementById("slide-link");
+    // // Get reference to the project-container element
+    // const projectContainer = document.getElementById("project-container");
   
-    // Add a CSS class to make the text color black (you should define this class in your CSS)
-    projectContainer.classList.add("black-text");
+    // // Add a CSS class to make the text color black (you should define this class in your CSS)
+    // projectContainer.classList.add("black-text");
+    projectTitle.textContent = "";
   }
