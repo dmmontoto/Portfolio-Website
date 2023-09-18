@@ -7,9 +7,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
@@ -18,12 +15,13 @@
 .project-content {
     padding: 20px;
     color: var(--secondary-grey);
-    text-align: center;
+    transform: translateY(200px);
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: 0.5s;
 }
 
 .project-card:hover .project-content {
+    transform: translateY(0px);
     opacity: 1;
 }
 
@@ -35,12 +33,47 @@
     font-family: 'Nanum Myeongjo', serif;
 }
 
-.project-content p {
-    text-align: center;
-    margin-top: 30px;
+.project-content {
+
+}
+
+.project-content li {
+    color: white;
+    list-style: none;
     font-size: 20px;
-    color: var(--secondary-grey);
-    line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.project-content li:not(:last-child) {
+margin-bottom: 15px;
+}
+
+.project-content li:before {
+    content: "\235F";
+    color: var(--main-blue);
+    margin-right: 10px;
+}
+
+.project-links {
+    align-items: center;
+    justify-content: center;
+}
+
+.project-links img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    transition: filter 0.3s ease; /* Add a smooth transition effect */
+    color: var(--main-blue);
+    transition: transform 0.3s ease-in-out 0s;
+}
+
+.project-links img:hover {
+    filter: brightness(1.5); /* Adjust the value to make the icon brighter on hover */
+    transform: translateY(-10px);
+}
+
+.project-links a {
+    text-decoration: none;
 }
