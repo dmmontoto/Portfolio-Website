@@ -33,10 +33,6 @@
     font-family: 'Nanum Myeongjo', serif;
 }
 
-.project-content {
-
-}
-
 .project-content li {
     color: white;
     list-style: none;
@@ -56,8 +52,9 @@ margin-bottom: 15px;
 }
 
 .project-links {
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Use flexbox to center the images horizontally */
+    align-items: center; /* Center vertically within the container */
+    justify-content: center; /* Center horizontally within the container */
 }
 
 .project-links img {
@@ -76,4 +73,13 @@ margin-bottom: 15px;
 
 .project-links a {
     text-decoration: none;
+}
+
+#disclaimer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 30px;
 }
