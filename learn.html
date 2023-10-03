@@ -5,301 +5,342 @@
   <title>Portfolio Homepage</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@600&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@600&family=Nanum+Myeongjo:wght@700&family=Ruwudu&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"/>
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
-  <link rel="stylesheet" type="text/css" href="./assets/css/learn.css"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Nanum+Myeongjo:wght@700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@600&family=Nanum+Myeongjo:wght@700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@600&family=Nanum+Myeongjo:wght@700&family=Ruwudu&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/learn.css" />
 </head>
 
 <body>
   <!-- Header -->
   <header></header>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-      <div class="container">
-        <!-- <a class="navbar-brand fs-4" href="#">Portfolio</a> -->
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <div class="container">
+      <!-- <a class="navbar-brand fs-4" href="#">Portfolio</a> -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Sidebar-->
-        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <!-- Sidebar-->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
 
-          <!-- Sidebar Header-->
-          <div class="offcanvas-header text-white border-bottom">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Portfolio</h5>
-            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-
-          <!-- Sidebar Body-->
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-              <li class="nav-item mx-2">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" aria-current="page" href="aboutme.html">About Me</a>
-              </li>
-              <li class="nav-item dropdown mx-2">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Projects
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="nasa.html">NASA Project</a></li>
-                  <li><a class="dropdown-item" href="#">Stock Project</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">5g Raspberry Pi Project</a></li>
-                </ul>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" aria-current="page" href="groupproject.html">Group Projects</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link active" aria-current="page" href="learn.html">Learn with Me</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" aria-current="page" href="resume.html">Resume</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" aria-current="page" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <main>
-      <div id="disclaimer"> 
-        <p>*** Some of the projects featured on this page were completed as part of coursework at the University of California, San Diego (UCSD). 
-          In accordance with UCSD's academic integrity code, I am unable to display specific code repositories or provide detailed information on group contributions for these projects. 
-          However, I am happy to discuss my individual contributions and the skills I developed while working on these assignments. 
-          Thank you for your understanding and respect for academic integrity. ***</p>
-      </div>
-
-        <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="project-container">
-                    <div class="project-card">
-                      <div class="project-title">
-                        <h2>Account-Based Technology Blog</h2>
-                      </div>
-                      <div class="project-content">
-                        <ul>
-                            <li>Developed a dynamic tech blog platform with user accounts, blog post creation, and interactive commenting features</li>
-                            <li>Designed a responsive web interface using HTML, CSS, and JavaScript, ensuring a seamless user experience</li>
-                            <li>Implemented secure SQL database for efficient account management and post storage, enhancing data accessibility and user control</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/dmmontoto/Account-Based-Tech-Blog" target="_blank">
-                              <img src="assets/images/GitLogo.png" alt="GitHub"/>
-                            </a>
-                            <a href="https://account-based-tech-blog-30c1584537a5.herokuapp.com" target="_blank">
-                              <img src="assets/images/WebsiteImage.png" alt="Website"/>
-                            </a>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              <div class="col-md-6">
-                <div class="project-container">
-                    <div class="project-card">
-                      <div class="project-title">
-                        <h2>E-Commerce Back End</h2>
-                      </div>
-                      <div class="project-content">
-                        <p>JavaScript</p>
-                        <ul>
-                            <li>Built an e-commerce backend using Express.js, Sequelize, and MySQL2, featuring API endpoints for streamlined category, product, and tag management</li>
-                            <li>Simplified project installation with precise instructions, covering package installations and environment variables, making it user-friendly for all</li>
-                            <li>Prioritized data management through a relational schema and included a data seeding script, allowing users to interact via API endpoints</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://www.github.com/dmmontoto" target="_blank">
-                              <img src="assets/images/GitLogo.png" alt="GitHub"/>
-                            </a>
-                            <a href="https://watch.screencastify.com/v/WRekLysGYWDiq2EqWitp" target="_blank">
-                              <img src="assets/images/tutorial.png" alt="Tutorial"/>
-                            </a>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
+        <!-- Sidebar Header-->
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Portfolio</h5>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="project-container">
-                  <div class="project-card">
-                    <div class="project-title">
-                      <h2>Employee Database</h2>
-                    </div>
-                    <div class="project-content">
-                      <ul>
-                          <li>Implemented a robust employee management system, offering secure SQL database with personalized login credentials to efficiently organize employee data</li>
-                          <li>Implemented an intuitive console interface for efficient employee data management, including features such as adding, updating employees and roles, and calculating departmental budgets</li>
-                          <li>Facilitated straightforward installation and setup for seamless navigation of the employee database</li>
-                      </ul>
-                      <div class="project-links">
-                          <a href="https://github.com/dmmontoto/Employee-Database" target="_blank">
-                            <img src="assets/images/GitLogo.png" alt="GitHub"/>
-                          </a>
-                          <a href="https://watch.screencastify.com/v/xSogs9P4Az1uhCkN2Cuf" target="_blank">
-                            <img src="assets/images/tutorial.png" alt="Tutorial"/>
-                          </a>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-              <div class="project-container">
-                  <div class="project-card">
-                    <div class="project-title">
-                      <h2>Express Note Taker</h2>
-                    </div>
-                    <div class="project-content">
-                      <ul>
-                          <li>list item 1</li>
-                          <li>list item 2</li>
-                          <li>list item 3</li>
-                      </ul>
-                      <div class="project-links">
-                          <a href="https://github.com/dmmontoto/Express-Note-Taker" target="_blank">
-                            <img src="assets/images/GitLogo.png" alt="GitHub"/>
-                          </a>
-                          <a href="https://obscure-tor-52322-6bd0bbddb400.herokuapp.com/" target="_blank">
-                            <img src="assets/images/WebsiteImage.png" alt="Website"/>
-                          </a>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-          </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="project-container">
-                <div class="project-card">
-                  <div class="project-title">
-                    <h2>Employee Database</h2>
-                  </div>
-                  <div class="project-content">
-                    <ul>
-                        <li>Implemented a robust employee management system, offering secure SQL database with personalized login credentials to efficiently organize employee data</li>
-                        <li>Implemented an intuitive console interface for efficient employee data management, including features such as adding, updating employees and roles, and calculating departmental budgets</li>
-                        <li>Facilitated straightforward installation and setup for seamless navigation of the employee database</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="https://github.com/dmmontoto/Employee-Database" target="_blank">
-                          <img src="assets/images/GitLogo.png" alt="GitHub"/>
-                        </a>
-                        <a href="https://watch.screencastify.com/v/xSogs9P4Az1uhCkN2Cuf" target="_blank">
-                          <img src="assets/images/tutorial.png" alt="Tutorial"/>
-                        </a>
-                      </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-            <div class="project-container">
-                <div class="project-card">
-                  <div class="project-title">
-                    <h2>Weather Tracker API</h2>
-                  </div>
-                  <div class="project-content">
-                    <ul>
-                        <li>list item 1</li>
-                        <li>list item 2</li>
-                        <li>list item 3</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="https://www.github.com/dmmontoto" target="_blank">
-                          <img src="assets/images/GitLogo.png" alt="GitHub"/>
-                        </a>
-                        <a href="https://www.instagram.com/david_montoto/" target="_blank">
-                          <img src="assets/images/WebsiteImage.png" alt="Instagram"/>
-                        </a>
-                      </div>
-                  </div>
-                </div>
-              </div>
+        <!-- Sidebar Body-->
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+            <li class="nav-item mx-2">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" aria-current="page" href="aboutme.html">About Me</a>
+            </li>
+            <li class="nav-item dropdown mx-2">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="nasa.html">NASA Project</a></li>
+                <li><a class="dropdown-item" href="#">Stock Project</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">5g Raspberry Pi Project</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" aria-current="page" href="groupproject.html">Group Projects</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="learn.html">Learn with Me</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" aria-current="page" href="resume.html">Resume</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" aria-current="page" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div id="disclaimer">
+      <p>*** Some of the projects featured on this page were completed as part of coursework at the University of
+        California, San Diego (UCSD).
+        In accordance with UCSD's academic integrity code, I am unable to display specific code repositories or provide
+        detailed information on group contributions for these projects.
+        However, I am happy to discuss my individual contributions and the skills I developed while working on these
+        assignments.
+        Thank you for your understanding and respect for academic integrity. ***</p>
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="project-container">
-              <div class="project-card">
-                <div class="project-title">
-                  <h2>Employee Database</h2>
-                </div>
-                <div class="project-content">
-                  <ul>
-                      <li>Implemented a robust employee management system, offering secure SQL database with personalized login credentials to efficiently organize employee data</li>
-                      <li>Implemented an intuitive console interface for efficient employee data management, including features such as adding, updating employees and roles, and calculating departmental budgets</li>
-                      <li>Facilitated straightforward installation and setup for seamless navigation of the employee database</li>
-                  </ul>
-                  <div class="project-links">
-                      <a href="https://github.com/dmmontoto/Employee-Database" target="_blank">
-                        <img src="assets/images/GitLogo.png" alt="GitHub"/>
-                      </a>
-                      <a href="https://watch.screencastify.com/v/xSogs9P4Az1uhCkN2Cuf" target="_blank">
-                        <img src="assets/images/tutorial.png" alt="Tutorial"/>
-                      </a>
-                    </div>
+            <div class="project-card">
+              <div class="project-title">
+                <h2>Account-Based Technology Blog</h2>
+              </div>
+              <div class="project-content">
+                <ul>
+                  <li>Developed a dynamic tech blog platform with user accounts, blog post creation, and interactive
+                    commenting features</li>
+                  <li>Designed a responsive web interface using HTML, CSS, and JavaScript, ensuring a seamless user
+                    experience</li>
+                  <li>Implemented secure SQL database for efficient account management and post storage, enhancing data
+                    accessibility and user control</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/dmmontoto/Account-Based-Tech-Blog" target="_blank">
+                    <img src="assets/images/GitLogo.png" alt="GitHub" />
+                  </a>
+                  <a href="https://account-based-tech-blog-30c1584537a5.herokuapp.com" target="_blank">
+                    <img src="assets/images/WebsiteImage.png" alt="Website" />
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
         </div>
         <div class="col-md-6">
           <div class="project-container">
-              <div class="project-card">
-                <div class="project-title">
-                  <h2>Weather Tracker API</h2>
-                </div>
-                <div class="project-content">
-                  <ul>
-                      <li>list item 1</li>
-                      <li>list item 2</li>
-                      <li>list item 3</li>
-                  </ul>
-                  <div class="project-links">
-                      <a href="https://www.github.com/dmmontoto" target="_blank">
-                        <img src="assets/images/GitLogo.png" alt="GitHub"/>
-                      </a>
-                      <a href="https://www.instagram.com/david_montoto/" target="_blank">
-                        <img src="assets/images/WebsiteImage.png" alt="Instagram"/>
-                      </a>
-                    </div>
+            <div class="project-card">
+              <div class="project-title">
+                <h2>E-Commerce Back End</h2>
+              </div>
+              <div class="project-content">
+                <!-- <p>JavaScript</p> -->
+                <ul>
+                  <li>Built an e-commerce backend using Express.js, Sequelize, and MySQL2, featuring API endpoints for
+                    streamlined category, product, and tag management</li>
+                  <li>Simplified project installation with precise instructions, covering package installations and
+                    environment variables, making it user-friendly for all</li>
+                  <li>Prioritized data management through a relational schema and included a data seeding script,
+                    allowing users to interact via API endpoints</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://www.github.com/dmmontoto" target="_blank">
+                    <img src="assets/images/GitLogo.png" alt="GitHub" />
+                  </a>
+                  <a href="https://watch.screencastify.com/v/WRekLysGYWDiq2EqWitp" target="_blank">
+                    <img src="assets/images/tutorial.png" alt="Tutorial" />
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
       </div>
-  </div>
-    </main>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="project-container">
+            <div class="project-card">
+              <div class="project-title">
+                <h2>Employee Database</h2>
+              </div>
+              <div class="project-content">
+                <ul>
+                  <li>Utilized a robust employee management system, offering secure SQL database with personalized
+                    login credentials to efficiently organize employee data</li>
+                  <li>Implemented an intuitive console interface for efficient employee data management, including
+                    features such as adding, updating employees and roles, and calculating departmental budgets</li>
+                  <li>Facilitated straightforward installation and setup for seamless navigation of the employee
+                    database</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/dmmontoto/Employee-Database" target="_blank">
+                    <img src="assets/images/GitLogo.png" alt="GitHub" />
+                  </a>
+                  <a href="https://watch.screencastify.com/v/xSogs9P4Az1uhCkN2Cuf" target="_blank">
+                    <img src="assets/images/tutorial.png" alt="Tutorial" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="project-container">
+            <div class="project-card">
+              <div class="project-title">
+                <h2>Express Note Taker</h2>
+              </div>
+              <div class="project-content">
+                <ul>
+                  <li>Developed a note-taking application that allows users to create, store, and share their notes
+                    with others on different devices through Heroku CLI</li>
+                  <li>Integrated key packages like Express and uuid for streamlined development, making it accessible
+                    for anyone interested in utilizing the application</li>
+                  <li>Designed an interactive and user-friendly web interface, where users can easily create, save,
+                    and manage notes</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/dmmontoto/Express-Note-Taker" target="_blank">
+                    <img src="assets/images/GitLogo.png" alt="GitHub" />
+                  </a>
+                  <a href="https://obscure-tor-52322-6bd0bbddb400.herokuapp.com/" target="_blank">
+                    <img src="assets/images/WebsiteImage.png" alt="Website" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="project-container">
+            <div class="project-card">
+              <div class="project-title">
+                <h2>SVG Logo Generator</h2>
+              </div>
+              <div class="project-content">
+                <ul>
+                  <li>Empowered business developers and entrepreneurs with the ability to craft personalized SVG
+                    logos tailored to their specific needs</li>
+                  <li>Simplified the logo design process with an interactive command-line interface, so users can
+                    easily generate logos by answering a few questions in the terminal, specifying text, shape, and
+                    color choices</li>
+                  <li>Implemented an extensive testing suite consisting of 23 individual tests to ensure the
+                    reliability and accuracy of the logo generation process</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/dmmontoto/SVG-Logo-Generator" target="_blank">
+                    <img src="assets/images/GitLogo.png" alt="GitHub" />
+                  </a>
+                  <a href="https://watch.screencastify.com/v/qhwqU9ufD7AKsV6EiIIj" target="_blank">
+                    <img src="assets/images/tutorial.png" alt="Tutorial" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="project-container">
+            <div class="project-card">
+              <div class="project-title">
+                <h2>ReadMe Generator</h2>
+              </div>
+              <div class="project-content">
+                <ul>
+                  <li>Simplified the process of generating comprehensive README.md files by providing users with a
+                    command-line interface, creating README files by responding to prompted questions</li>
+                  <li>Designed an intuitive user experience, where users initiate the process by running the command
+                    node index.js in an integrated terminal associated with the project</li>
+                  <li>Ensured a hassle-free setup by guiding users through the installation process, which involves
+                    running `npm init` and `npm install inquirer`</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/dmmontoto/ReadMe-Generator" target="_blank">
+                    <img src="assets/images/GitLogo.png" alt="GitHub" />
+                  </a>
+                  <a href="https://watch.screencastify.com/v/qwSDfozmfDzzucCPT7mF" target="_blank">
+                    <img src="assets/images/tutorial.png" alt="Tutorial" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="project-container">
+            <div class="project-card">
+              <div class="project-title">
+                <h2>Weather Tracker API</h2>
+              </div>
+              <div class="project-content">
+                <ul>
+                  <li>Developed the Weather Tracker website, offering users a simple and efficient way to access
+                    five-day weather forecasts for cities worldwide</li>
+                  <li>Implemented local storage functionality, allowing users to save cities of interest for easy
+                    access in the future</li>
+                  <li>Demonstrated efficient development practices by planning functions through pseudocode before
+                    implementation and featuring five functions and two event listeners to handle various user
+                    interactions and edge cases</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/dmmontoto/Weather-Tracker" target="_blank">
+                    <img src="assets/images/GitLogo.png" alt="GitHub" />
+                  </a>
+                  <a href="https://github.com/dmmontoto/Weather-Tracker" target="_blank">
+                    <img src="assets/images/WebsiteImage.png" alt="Website" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="project-container">
+            <div class="project-card">
+              <div class="project-title">
+                <h2>Data Structures and Algorithms<h2>
+              </div>
+              <div class="project-content">
+                <ul>
+                  <li>Designed and compared a BFS and DFS based maze solver while adding code to identify and
+                    navigate around obstacles in a 2D array input</li>
+                  <li>Implemented mock student class registration system for students using Hash Sets</li>
+                  <li>Developed a ticketing system for lab doubts using Priority Queues</li>
+                  <li>Implemented an N-Ary tree using BFS through an Array while developing a Heap Sort Algorithm
+                    for the same</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
 
 </body>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </html>
