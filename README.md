@@ -133,3 +133,26 @@ ${tests}
 For more information, check out my page: [Github](https://github.com/${username})
 
 For additional questions, please reach me at my email: ${email}
+
+
+For advanced data structures: 
+analyze data structures for both time and space complexity
+describe the strengths and weaknesses of a data structure
+implement complex data structures correctly and efficiently
+
+data structures:
+- collection containing: 
+- data baluse
+- relationships among the data
+- operations applied to the data
+
+Describes exactly how the data are organized and how tasks are performed
+
+whereas abstract data type defiend by uts behavior from the vier of the user
+described only what needs to be done, not how its done
+
+Array list (ds)
+
+
+List (adt)
+- able to add, find, remove, size, ordered
