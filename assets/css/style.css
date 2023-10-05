@@ -332,4 +332,80 @@ nav {
     z-index: -1; 
   }
 
+#bhaLogo {
+    display: flex;
+}
+
+#bha-img {
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: 10px; /* Positions the image at the top */
+    left: 0; /* Positions the image at the left */
+    filter: brightness(80%);
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+#raspberry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#raspberry-container {
+    margin: 5px;
+    justify-content: center;
+    position: relative;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 100;
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+#raspberry-container h1 {
+    font-size: 35px;
+    color: #fff;
+}
+
+#raspberry-container h2 {
+    font-size: 20px;
+    color: var(--main-blue);
+    margin-bottom: 20px;
+}
+
+#raspberry-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow images to wrap to the next line when there isn't enough space */
+}
+
+#raspberry-images img {
+    max-width: 45%;
+    min-width: 100px;
+    margin: 5px;
+}
+
+#raspberry-bullets ul li:before {
+    content: "\235F";
+    color: var(--main-blue);
+    margin-right: 10px;
+}
+
+#raspberry-bullets ul li {
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 25px;
+    color: #fff;
+}
 
