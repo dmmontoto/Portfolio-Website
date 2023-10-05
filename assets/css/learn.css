@@ -80,7 +80,23 @@ margin-bottom: 15px;
     background-color: black;
     color: white;
     padding: 20px;
-    font-size: 25px;
+    font-size: 20px;
     font-family:'Times New Roman', Times, serif;
     line-height: 30px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
 }
+
+#disclaimer p {
+    margin: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    #disclaimer {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
