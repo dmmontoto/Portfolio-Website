@@ -347,13 +347,19 @@ nav {
     margin-bottom: 50px;
 }
 
-#raspberry {
+#plotter {
+    margin-top: 50px;
+}
+
+#raspberry,
+#plotter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#raspberry-container {
+#raspberry-container,
+#plotter-container {
     margin: 5px;
     justify-content: center;
     position: relative;
@@ -372,7 +378,8 @@ nav {
     box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
 
-#raspberry-container h1 {
+#raspberry-container h1,
+#plotter-container h1 {
     font-size: 35px;
     color: #fff;
 }
@@ -383,26 +390,30 @@ nav {
     margin-bottom: 20px;
 }
 
-#raspberry-images {
+#raspberry-images,
+#plotter-images {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Allow images to wrap to the next line when there isn't enough space */
 }
 
-#raspberry-images img {
+#raspberry-images img,
+#plotter-images img {
     max-width: 45%;
     min-width: 100px;
     margin: 5px;
 }
 
-#raspberry-bullets ul li:before {
+#raspberry-bullets ul li:before,
+#plotter-bullets ul li:before {
     content: "\235F";
     color: var(--main-blue);
     margin-right: 10px;
 }
 
-#raspberry-bullets ul li {
+#raspberry-bullets ul li,
+#plotter-bullets ul li {
     font-size: 20px;
     margin-top: 10px;
     line-height: 25px;
