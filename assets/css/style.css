@@ -159,7 +159,15 @@ nav {
     margin-bottom: 50px;
 }
 
-.contact-section img {
+.link {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section img,
+.link img {
     width: 50px;
     height: 50px;
     margin-right: 20px;
@@ -169,12 +177,13 @@ nav {
     transition: transform 0.3s ease-in-out 0s;
 }
 
-.contact-section img:hover {
+.contact-section img:hover,
+.link img:hover {
     filter: brightness(1.5); /* Adjust the value to make the icon brighter on hover */
     transform: translateY(-10px);
 }
 
-.contact-section a {
+.contact-section a{
     text-decoration: none;
 }
 
