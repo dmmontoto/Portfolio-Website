@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Python Data Plotter</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <div class="container">
+        <!-- <a class="navbar-brand fs-4" href="#">Portfolio</a> -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Sidebar-->
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+          <!-- Sidebar Header-->
+          <div class="offcanvas-header text-white border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Portfolio</h5>
+            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <!-- Sidebar Body-->
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="aboutme.html">About Me</a>
+              </li>
+              <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="nasa.html">NASA Project</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="bha.html">5g Raspberry Pi</a></li>
+                  <li><a class="dropdown-item" href="rocket-plotter.html">Rocket Data Plotter</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="groupproject.html">Group Projects</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="learn.html">Learn with Me</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="resume.html">Resume</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+  <main id="nasa-api">
+
+    <div class="mars-background"></div>
+
+    <div id="bhaLogo">
+      <img id="bha-img" src="assets/images/BHA.png" />
+    </div>
+
+    <section class="container" id="raspberry">
+      <div id="raspberry-container" class="row justify-content-center align-items-center">
+        <div>
+          <div class="buttons d-flex justify-content-center align-items-center flex-column">
+            <h1>5g Raspberry Pi Live Stream</h1>
+            <h2>Project for Beverly Hills Aerials and T-Mobile</h2>
+          </div>
+          <div id="raspberry-images">
+            <img src="./assets/images/raspberry1.jpeg" alt="Raspberry Pi Image">
+            <img src="./assets/images/raspberry2.jpeg" alt="Raspberry Pi Livestream">
+          </div>
+          <div id="raspberry-bullets">
+            <ul>
+                <li>Programmed a Raspberry Pi 3 Model B+ with camera for live-streaming sporting events</li>
+                <li>Utilized libcamera to meet contractor's specifications</li>
+                <li>Configured GStreamer and remote access to allow live-streaming capabilities while raspberry pi is on custom build drone</li>
+                <li>Integrated 5g Quanta Chip for long range live streaming</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="response">
+      <h2 id="response-title"></h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <div id="rover-details">
+            <p id="rover-description"></p>
+            <iframe id="youtube-iframe" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+            <div id="slideshow-inner" class="carousel-inner"></div>
+            <!-- <a class="carousel-control-prev" href="#slideshow" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#slideshow" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    </main>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./assets/js/nasa.js"></script>
+</html>
